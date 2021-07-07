@@ -16,72 +16,90 @@ class Pricing extends React.Component {
         <Forever>
           <div>
             <h1>Free</h1>
-            <h3>/ Forever</h3>
+            <h3>/ Novice</h3>
           </div>
           <ul>
             <li>
-              <img src={greyCheck} alt="grey check" />
-              Create New Characters
+              <img src={greyCheck} alt="grey check" />5 Campaigns
+            </li>
+            <li>
+              <img src={greyCheck} alt="grey check" />5 Characters
             </li>
             <li>
               <img src={greyCheck} alt="grey check" />
-              Manage Character Sheets with Digital Dice
+              Combat Tracker
             </li>
             <li>
               <img src={greyCheck} alt="grey check" />
-              Use Tools to Organize Your Table
+              Import your own maps
+            </li>
+            <li>
+              <img src={greyCheck} alt="grey check" />
+              Free Assets pack
             </li>
           </ul>
         </Forever>
         <Editor>
           <div>
             <h1>$12</h1>
-            <h3>/ Discord Bot</h3>
+            <h3>/ Adept</h3>
           </div>
           <ul>
             <li>
               <img src={greenRedCheck} alt="green check" />
-              Create New Characters
+              10 Campaigns
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Manage Character Sheets with Digital Dice
+              Unlimited Characters
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Use Tools to Organize Your Table
+              Combat Tracker
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Play Anywhere with Discord Bot
+              Import own maps
+            </li>
+            <li>
+              <img src={greenCheck} alt="green check" />
+              Access 100+ assets including music and sound tracks for combat and
+              ambiance management
             </li>
           </ul>
         </Editor>
         <Month>
           <div>
             <h1>$24</h1>
-            <h3>/ All Included</h3>
+            <h3>/Master</h3>
           </div>
           <ul>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Create New Characters
+              Unlimited Campaigns
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Manage Character Sheets with Digital Dice
+              Unlimited Characters
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Use Tools to Organize Your Table
+              Combat Tracker
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Play Anywhere with Discord Bot
+              Import your own maps
             </li>
-            <img src={yellowCheck} alt="yellow check" />
-            All Platforms to Take Your Campaigns Anywhere
-            <li></li>
+            <li>
+              <img src={yellowCheck} alt="yellow check" />
+              Access 100+ assets including music and sound tracks for combat and
+              ambiance management
+            </li>
+            <li>
+              <img src={yellowCheck} alt="yellow check" />
+              Monetize your account and start making DMing for parties from
+              across the World
+            </li>
           </ul>
         </Month>
       </div>
