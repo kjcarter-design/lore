@@ -21,64 +21,67 @@ class Pricing extends React.Component {
           <ul>
             <li>
               <img src={greyCheck} alt="grey check" />
-              Components-driven system
+              Create New Characters
             </li>
             <li>
               <img src={greyCheck} alt="grey check" />
-              Sales-boosting landing pages
+              Manage Character Sheets with Digital Dice
             </li>
             <li>
               <img src={greyCheck} alt="grey check" />
-              Awesome Feather icons pack
+              Use Tools to Organize Your Table
             </li>
           </ul>
         </Forever>
         <Editor>
           <div>
             <h1>$12</h1>
-            <h3>/ Editor</h3>
+            <h3>/ Discord Bot</h3>
           </div>
           <ul>
             <li>
               <img src={greenRedCheck} alt="green check" />
-              Components-driven system
+              Create New Characters
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Sales-boosting landing pages
+              Manage Character Sheets with Digital Dice
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Awesome Feather icons pack
+              Use Tools to Organize Your Table
             </li>
             <li>
               <img src={greenCheck} alt="green check" />
-              Themed into 3 different styles
+              Play Anywhere with Discord Bot
             </li>
           </ul>
         </Editor>
         <Month>
           <div>
             <h1>$24</h1>
-            <h3>/ Month</h3>
+            <h3>/ All Included</h3>
           </div>
           <ul>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Components-driven system
+              Create New Characters
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Sales-boosting landing pages
+              Manage Character Sheets with Digital Dice
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Awesome Feather icons pack
+              Use Tools to Organize Your Table
             </li>
             <li>
               <img src={yellowCheck} alt="yellow check" />
-              Themed into 3 different styles
+              Play Anywhere with Discord Bot
             </li>
+            <img src={yellowCheck} alt="yellow check" />
+            All Platforms to Take Your Campaigns Anywhere
+            <li></li>
           </ul>
         </Month>
       </div>

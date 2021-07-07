@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar.jsx";
 import devices from "./images/devices.svg";
+import MainImage from "./images/MainImage.svg";
 
 class Header extends React.Component {
   render() {
@@ -9,10 +10,12 @@ class Header extends React.Component {
       <div>
         <div>
           <Navbar />
-          <img src={devices} alt="Electronic Screens" />
-          <Title>The Time has come</Title>
-          <Free>Try for Free</Free>
-          <Learn>Learn More</Learn>
+          <div>
+            <img src={devices} alt="Electronic Screens" />
+            <Title>The Time has come</Title>
+            <Dragon src={MainImage} alt="dragon" />
+            <Learn>Learn More</Learn>
+          </div>
         </div>
       </div>
     );
@@ -22,16 +25,8 @@ class Header extends React.Component {
 export default Header;
 
 const Title = styled.h1`
-  width: 50%;
   text-align: center;
-`;
-
-const Free = styled.button`
-  background-color: #111b47;
-  color: #fff;
-  width: 11.5rem;
-  height: 2.2rem;
-  margin-left: 10rem;
+  z-index: 10;
 `;
 
 const Learn = styled.button`
@@ -40,4 +35,10 @@ const Learn = styled.button`
   width: 11.5rem;
   height: 2.2rem;
   margin-left: 2rem;
+`;
+
+const Dragon = styled.img`
+  margin-top: -1rem;
+  width: 100%;
+  z-index: 1;
 `;
