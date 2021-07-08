@@ -16,51 +16,46 @@ class Pricing extends React.Component {
           <Forever>
             <FreeTitle>
               <Free>Free</Free>
-              <Novice>/ Novice</Novice>
+              <Novice>Novice Package</Novice>
             </FreeTitle>
             <ul>
               <li>
-                <GreyChecked src={greyCheck} alt="grey check" />5 Campaigns
-              </li>
-              <li>
-                <GreyChecked src={greyCheck} alt="grey check" />5 Characters
+                <GreyChecked src={greyCheck} alt="grey check" />
+                Create up to 8 different characters
               </li>
               <li>
                 <GreyChecked src={greyCheck} alt="grey check" />
-                Combat Tracker
+                Create and join campaigns
               </li>
               <li>
                 <GreyChecked src={greyCheck} alt="grey check" />
-                Import your own maps
+                Access to the battle map and public forums
               </li>
-              <li>
-                <GreyChecked src={greyCheck} alt="grey check" />
-                Free Assets pack
-              </li>
+              <button>Try for Free</button>
             </ul>
           </Forever>
           <Editor>
             <FreeTitle>
-              <Free>$12</Free>
-              <Novice>/ Adept</Novice>
+              <Free>$5/mo</Free>
+              <Novice>Adept Package</Novice>
             </FreeTitle>
             <ul>
               <li>
                 <GreyChecked src={greenCheck} alt="green check" />
-                10 Campaigns
+                Access to all novice package perks
               </li>
               <li>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Unlimited Characters
+                Create unlimited characters
               </li>
               <li>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Combat Tracker
+                Custom homebrew campaign tool sets
               </li>
-              <li>
+              <GreenLi>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Import own maps
-              </li>
+                Wider variety of customization for maps and characters
+              </GreenLi>
               <GreenLi>
                 <GreyChecked src={greenCheck} alt="green check" />
                 Access 100+ assets including music and sound tracks for combat
@@ -70,36 +65,26 @@ class Pricing extends React.Component {
           </Editor>
           <Month>
             <FreeTitle>
-              <Free>$24</Free>
-              <Novice>/Master</Novice>
+              <Free>$8/mo</Free>
+              <Novice>Master Package</Novice>
             </FreeTitle>
             <ul>
               <li>
                 <GreyChecked src={yellowCheck} alt="yellow check" />
-                Unlimited Campaigns
+                Access to all novice and adept perks
               </li>
               <li>
                 <GreyChecked src={yellowCheck} alt="yellow check" />
-                Unlimited Characters
+                Early access to new tools and mechanics
               </li>
               <li>
                 <GreyChecked src={yellowCheck} alt="yellow check" />
-                Combat Tracker
+                Unlimited encounters and monsters
               </li>
               <li>
                 <GreyChecked src={yellowCheck} alt="yellow check" />
-                Import your own maps
+                Monthly perks and rewards
               </li>
-              <GreenLi>
-                <GreyChecked src={yellowCheck} alt="yellow check" />
-                Access 100+ assets including music and sound tracks for combat
-                and ambiance management
-              </GreenLi>
-              <GreenLi>
-                <GreyChecked src={yellowCheck} alt="yellow check" />
-                Monetize your account and start making DMing for parties from
-                across the World
-              </GreenLi>
             </ul>
           </Month>
         </Container>
@@ -125,8 +110,8 @@ const Forever = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 6px #000;
-  width: 30%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  width: 25%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
@@ -137,11 +122,12 @@ const Editor = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 6px #ffe815;
-  width: 30%;
+  box-shadow: 2px 2px 6px rgba(255, 232, 21, 0.5);
+  width: 25%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
+  margin-top: 2rem;
 `;
 
 const Month = styled.div`
@@ -149,9 +135,9 @@ const Month = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 6px #000;
-  width: 30%;
-  height: 400px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  width: 25%;
+  height: 350px;
   list-style: none;
   line-height: 2rem;
 `;
@@ -163,8 +149,6 @@ const Free = styled.div`
 `;
 
 const FreeTitle = styled.div`
-  display: flex;
-  align-items: flex-end;
   margin-bottom: 1rem;
 `;
 
