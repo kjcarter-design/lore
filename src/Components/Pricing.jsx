@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "../App.css";
 import greyCheck from "./images/greyCheck.svg";
 import greenCheck from "./images/greenCheck.svg";
 import yellowCheck from "./images/yellowCheck.svg";
@@ -10,7 +11,7 @@ class Pricing extends React.Component {
       <div>
         <Price>
           <h1>Affordable Pricing</h1>
-          <h3>Monthly</h3>
+          <Monthly>monthly</Monthly>
         </Price>
         <Container>
           <Forever>
@@ -101,8 +102,15 @@ const Container = styled.div`
 `;
 
 const Price = styled.div`
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 2rem;
   text-align: center;
+`;
+
+const Monthly = styled.h3`
+  color: #8251eb;
+  font-size: 1.5rem;
 `;
 
 const Forever = styled.div`
