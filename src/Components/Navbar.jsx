@@ -16,7 +16,10 @@ class Navbar extends React.Component {
           <List>What we do</List>
           <img src={dotNavbar} alt="spacer" />
           <List>Contact Us</List>
-          <Button>Sign In</Button>
+          <Button>
+            <Sign>Sign In</Sign>
+            <Free>Try for Free</Free>
+          </Button>
         </Holder>
       </div>
     );
@@ -27,9 +30,11 @@ export default Navbar;
 
 const Holder = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 70%;
+  width: 100%;
+  background-color: #ece9e9;
+  position: relative;
 `;
 
 const List = styled.li`
@@ -37,9 +42,21 @@ const List = styled.li`
   color: #8251eb;
 `;
 
-const Button = styled.button`
+const Sign = styled.button`
   background-color: #111b47;
   color: #fff;
   width: 11.5rem;
   height: 2.2rem;
+`;
+
+const Free = styled.button`
+  background-color: #111b47;
+  color: #fff;
+  width: 11.5rem;
+  height: 2.2rem;
+  margin-left: 1rem;
+`;
+
+const Button = styled.div`
+  position: relative;
 `;

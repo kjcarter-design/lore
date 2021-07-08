@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar.jsx";
-import devices from "./images/devices.svg";
 
 class Hero extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <img src={devices} alt="Electronic Screens" />
-        <Title>The Time has come</Title>
-        <Free>Try for Free</Free>
-        <Learn>Learn More</Learn>
+        <Video
+          width="455"
+          height="256"
+          src="https://www.youtube.com/embed/6X7qvZvhXRo"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></Video>
+        {/* <Reviews /> */}
       </div>
     );
   }
@@ -19,23 +21,7 @@ class Hero extends React.Component {
 
 export default Hero;
 
-const Title = styled.h1`
-  width: 50%;
-  text-align: center;
-`;
-
-const Free = styled.button`
-  background-color: #111b47;
-  color: #fff;
-  width: 11.5rem;
-  height: 2.2rem;
-  margin-left: 10rem;
-`;
-
-const Learn = styled.button`
-  background: transparent;
-  color: #111b47;
-  width: 11.5rem;
-  height: 2.2rem;
-  margin-left: 2rem;
+const Video = styled.iframe`
+  box-shadow: 4px 4px 1.5px #111b47;
+  border: transparent;
 `;
