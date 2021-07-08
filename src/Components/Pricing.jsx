@@ -99,6 +99,7 @@ export default Pricing;
 const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Price = styled.div`
@@ -151,7 +152,7 @@ const Month = styled.div`
 `;
 
 const Free = styled.div`
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-right: 0.25rem;
   text-transform: uppercase;
 `;
