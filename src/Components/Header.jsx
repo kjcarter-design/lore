@@ -8,15 +8,14 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <Container>
           <Navbar />
           <div>
-            <img src={devices} alt="Electronic Screens" />
+            <Devices src={devices} alt="Electronic Screens" />
             <Title>The Time has come</Title>
             <Dragon src={MainImage} alt="dragon" />
-            <Learn>Learn More</Learn>
           </div>
-        </div>
+        </Container>
       </div>
     );
   }
@@ -24,21 +23,28 @@ class Header extends React.Component {
 
 export default Header;
 
-const Title = styled.h1`
-  text-align: center;
-  z-index: 10;
+const Container = styled.div`
+  position: relative;
 `;
 
-const Learn = styled.button`
-  background: transparent;
-  color: #111b47;
-  width: 11.5rem;
-  height: 2.2rem;
-  margin-left: 2rem;
+const Title = styled.h1`
+  position: relative;
+  z-index: 2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.5vw;
+  text-align: center;
+  top: -20rem;
+  left: 7rem;
 `;
 
 const Dragon = styled.img`
-  margin-top: -1rem;
+  margin-top: -33%;
   width: 100%;
-  z-index: 1;
+`;
+
+const Devices = styled.img`
+  position: relative;
+  z-index: 2;
+  width: 50%;
 `;
