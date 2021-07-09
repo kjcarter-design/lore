@@ -23,10 +23,12 @@ class Navbar extends React.Component {
             <Dot src={dotNavbar} alt="spacer" />
             Contact Us
           </List>
+          <List>
+            <Free>Try for Free</Free>
+          </List>
         </Holder>
         <Button>
           <Sign>Sign In</Sign>
-          <Free>Try for Free</Free>
         </Button>
       </Container>
     );
@@ -42,15 +44,18 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  font-size: 0.7rem;
+  height: 10rem;
+  width: 100%;
 `;
 
 const Holder = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
+  width: 100%;
   background-color: #f9f8f8;
-  position: relative;
+  margin-top: 5.25rem;
 `;
 
 const List = styled.li`
@@ -59,31 +64,66 @@ const List = styled.li`
 `;
 
 const Current = styled.li`
-  color: #000;
+  display: none;
 `;
 
 const Sign = styled.button`
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  background-color: transparent;
-  color: #111b47;
-  border: none;
-  width: max-content;
+  display: none;
 `;
 
 const Free = styled.button`
   font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
   background-color: #111b47;
   color: #fff;
-  padding: 10px;
+  padding: 3px;
+  align-self: flex-end;
   width: max-content;
   margin-left: 1rem;
+  border: none;
 `;
 
 const Dot = styled.img`
-  margin-right: 10px;
+  width: 10%;
+  margin-right: 2px;
 `;
 
 const Button = styled.span`
-  margin-left: 15rem;
+  margin: 0;
+  display: inline;
 `;
+
+// const Container = styled.div`
+
+// `;
+
+// const Holder = styled.ul`
+
+//   width: 60%;
+
+//   /* position: relative; */
+// `;
+
+// const Current = styled.li`
+//   color: #000;
+// `;
+
+// const Sign = styled.button`
+//   font-family: "Roboto", sans-serif;
+//   font-size: 1.2rem;
+//   background-color: transparent;
+//   color: #111b47;
+//   border: none;
+//   width: max-content;
+//   @media (max-width: 400px) {
+//     display: none;
+//   }
+// `;
+
+// const Dot = styled.img`
+//   margin-right: 10px;
+// `;
+
+// const Button = styled.span`
+//   margin-left: 15rem;
+// `;

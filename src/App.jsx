@@ -11,10 +11,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
       <Menu />
-      <Pricing />
-      <Footer />
+      {/* <Pricing />
+      <Footer />  */}
     </div>
   );
 }
