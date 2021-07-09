@@ -32,7 +32,7 @@ class Pricing extends React.Component {
                 <GreyChecked src={greyCheck} alt="grey check" />
                 Access to the battle map and public forums
               </li>
-              <button>Try for Free</button>
+              <Button>Try for Free</Button>
             </ul>
           </Forever>
           <Editor>
@@ -53,15 +53,19 @@ class Pricing extends React.Component {
                 <GreyChecked src={greenCheck} alt="green check" />
                 Custom homebrew campaign tool sets
               </li>
-              <GreenLi>
+              <QuoteLi>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Wider variety of customization for maps and characters
-              </GreenLi>
-              <GreenLi>
+                <blockquote>
+                  Wider variety of customization for maps and characters
+                </blockquote>
+              </QuoteLi>
+              <QuoteLi>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Access 100+ assets including music and sound tracks for combat
-                and ambiance management
-              </GreenLi>
+                <blockquote>
+                  Access 100+ assets including music and sound tracks for combat
+                  and ambiance management
+                </blockquote>
+              </QuoteLi>
             </ul>
           </Editor>
           <Month>
@@ -98,6 +102,8 @@ export default Pricing;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   font-family: "Roboto", sans-serif;
 `;
@@ -120,10 +126,11 @@ const Forever = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
+  margin-top: 2rem;
 `;
 
 const Editor = styled.div`
@@ -132,9 +139,10 @@ const Editor = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(255, 232, 21, 0.5);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
+
   line-height: 2rem;
   margin-top: 2rem;
 `;
@@ -145,10 +153,12 @@ const Month = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Free = styled.div`
@@ -170,7 +180,17 @@ const GreyChecked = styled.img`
   margin-right: 10px;
 `;
 
-const GreenLi = styled.li`
-  line-height: 1rem;
-  width: 90%;
+const QuoteLi = styled.li`
+  display: flex;
+  line-height: 1.5rem;
+`;
+
+const Button = styled.button`
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 27, 71);
+  border-radius: 2px;
+  padding: 0.25rem;
+  border-style: none;
+  margin-top: 2rem;
+  margin-left: 7rem;
 `;
