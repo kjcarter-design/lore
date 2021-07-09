@@ -1,24 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import discord from "./images/discord.svg";
-import facebook from "./images/facebook.svg";
-import twitch from "./images/twitch.svg";
-import youTube from "./images/youtube-play.svg";
-import reddit from "./images/reddit.svg";
-import twitter from "./images/twitter.svg";
+import discord from "./images/mobile-imgs/DiscordGrey.svg";
+import facebook from "./images/mobile-imgs/FacebookGrey.svg";
+import youTube from "./images/mobile-imgs/YouTubeGrey.svg";
+import twitter from "./images/mobile-imgs/TwitterGrey.svg";
+import insta from "./images/mobile-imgs/InstagramGrey.svg";
 
 class Socials extends React.Component {
   render() {
     return (
       <div>
-        <Connect>Connect With Us</Connect>
         <Logos>
-          <Image src={discord} alt="discord" />{" "}
-          <Image src={twitch} alt="twitch" />
-          <Image src={facebook} alt="facebook" />{" "}
+          <Image src={facebook} alt="facebook" />
+          <Image src={insta} alt="Instagram" />
           <Image src={twitter} alt="twitter" />
-          <Image src={youTube} alt="youTube" />{" "}
-          <Image src={reddit} alt="reddit" />
+          <Image src={discord} alt="discord" />
+          <Image src={youTube} alt="youTube" />
         </Logos>
       </div>
     );
@@ -27,18 +24,14 @@ class Socials extends React.Component {
 
 export default Socials;
 
-const Connect = styled.h2`
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-`;
-
 const Logos = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Image = styled.img`
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 `;

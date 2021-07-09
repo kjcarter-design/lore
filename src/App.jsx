@@ -14,7 +14,7 @@ function App() {
       <Menu />
       <Keyframes />
       <Pricing />
-      {/* <Footer />   */}
+      <Footer />
     </div>
   );
 }

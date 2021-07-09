@@ -8,7 +8,7 @@ import yellowCheck from "./images/yellowCheck.svg";
 class Pricing extends React.Component {
   render() {
     return (
-      <div>
+      <Main>
         <Price>
           <h1>Affordable Pricing</h1>
           <Monthly>monthly</Monthly>
@@ -93,12 +93,16 @@ class Pricing extends React.Component {
             </ul>
           </Month>
         </Container>
-      </div>
+      </Main>
     );
   }
 }
 
 export default Pricing;
+
+const Main = styled.div`
+  background-color: rgb(255, 255, 255);
+`;
 
 const Container = styled.div`
   display: flex;

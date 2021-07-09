@@ -51,11 +51,12 @@ const Container = styled.div`
 
 const Holder = styled.ul`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   background-color: #f9f8f8;
   margin-top: 5.25rem;
+  margin-left: 1.25rem;
 `;
 
 const List = styled.li`
@@ -89,8 +90,8 @@ const Dot = styled.img`
 `;
 
 const Button = styled.span`
-  margin: 0;
   display: inline;
+  margin-right: 1rem;
 `;
 
 // const Container = styled.div`

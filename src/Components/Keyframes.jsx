@@ -23,7 +23,7 @@ export default Keyframes;
 const Map = styled.img`
   width: 90%;
   margin: auto;
-  position: absolute;
+  position: relative;
   top: 13rem;
   left: 1rem;
 `;
@@ -42,7 +42,7 @@ const Join = styled.p`
   font-size: 1.5rem;
   text-align: center;
   position: relative;
-  top: 27rem;
+  top: 17rem;
 `;
 
 const Epic = styled.span`
