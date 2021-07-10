@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Reviews from "./Reviews.jsx";
+// import Reviews from "./Reviews.jsx";
 
 class Hero extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class Hero extends React.Component {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></Video>
-        <Reviews />
+        {/* <Reviews /> */}
       </Container>
     );
   }
