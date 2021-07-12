@@ -102,6 +102,7 @@ export default Pricing;
 
 const Main = styled.div`
   background-color: rgb(255, 255, 255);
+  margin-top: 2rem;
 `;
 
 const Container = styled.div`
@@ -110,6 +111,11 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
   font-family: "Roboto", sans-serif;
+  @media (min-width: 400px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
 
 const Price = styled.div`
@@ -117,6 +123,9 @@ const Price = styled.div`
   font-weight: 300;
   font-size: 2rem;
   text-align: center;
+  @media (min-width: 400px) {
+    font-weight: 600;
+  }
 `;
 
 const Monthly = styled.h3`
@@ -135,6 +144,9 @@ const Forever = styled.div`
   list-style: none;
   line-height: 2rem;
   margin-top: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+  }
 `;
 
 const Editor = styled.div`
@@ -146,9 +158,11 @@ const Editor = styled.div`
   width: 90%;
   height: 350px;
   list-style: none;
-
   line-height: 2rem;
   margin-top: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+  }
 `;
 
 const Month = styled.div`
@@ -163,6 +177,10 @@ const Month = styled.div`
   line-height: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+    margin-bottom: 0;
+  }
 `;
 
 const Free = styled.div`

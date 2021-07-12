@@ -23,13 +23,13 @@ class Navbar extends React.Component {
             <Dot src={dotNavbar} alt="spacer" />
             Contact Us
           </List>
+          <Button>
+            <Sign>Sign In</Sign>
+          </Button>
           <List>
             <Free>Try for Free</Free>
           </List>
         </Holder>
-        <Button>
-          <Sign>Sign In</Sign>
-        </Button>
       </Container>
     );
   }
@@ -47,16 +47,23 @@ const Container = styled.div`
   font-size: 0.7rem;
   height: 10rem;
   width: 100%;
+  @media (min-width: 400px) {
+    color: rgb(249, 248, 248);
+  }
 `;
 
 const Holder = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  background-color: #f9f8f8;
-  margin-top: 5.25rem;
-  margin-left: 1.25rem;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  margin-top: 7.5rem;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.05);
+  @media (min-width: 400px) {
+    margin-bottom: 2.5rem;
+    color: rgb(249, 248, 248);
+  }
 `;
 
 const List = styled.li`
@@ -69,7 +76,18 @@ const Current = styled.li`
 `;
 
 const Sign = styled.button`
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: #111b47;
+  border: none;
+  width: max-content;
   display: none;
+  @media (min-width: 400px) {
+    display: block;
+    margin-left: 10rem;
+    margin-right: -5rem;
+  }
 `;
 
 const Free = styled.button`
@@ -80,7 +98,7 @@ const Free = styled.button`
   padding: 3px;
   align-self: flex-end;
   width: max-content;
-  margin-left: 1rem;
+  margin-left: 0.75rem;
   border: none;
 `;
 
@@ -93,38 +111,3 @@ const Button = styled.span`
   display: inline;
   margin-right: 1rem;
 `;
-
-// const Container = styled.div`
-
-// `;
-
-// const Holder = styled.ul`
-
-//   width: 60%;
-
-//   /* position: relative; */
-// `;
-
-// const Current = styled.li`
-//   color: #000;
-// `;
-
-// const Sign = styled.button`
-//   font-family: "Roboto", sans-serif;
-//   font-size: 1.2rem;
-//   background-color: transparent;
-//   color: #111b47;
-//   border: none;
-//   width: max-content;
-//   @media (max-width: 400px) {
-//     display: none;
-//   }
-// `;
-
-// const Dot = styled.img`
-//   margin-right: 10px;
-// `;
-
-// const Button = styled.span`
-//   margin-left: 15rem;
-// `;

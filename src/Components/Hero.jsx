@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import Reviews from "./Reviews.jsx";
+import Reviews from "./Reviews.jsx";
 
 class Hero extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class Hero extends React.Component {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></Video>
-        {/* <Reviews /> */}
+        <Reviews />
       </Container>
     );
   }
@@ -27,8 +27,16 @@ const Video = styled.iframe`
   border: transparent;
   width: 90%;
   margin-left: 1rem;
+  @media (min-width: 400px) {
+    width: 400px;
+    height: 300px;
+  }
 `;
 
 const Container = styled.div`
   background-color: rgb(253, 251, 251);
+  @media (min-width: 400px) {
+    display: flex;
+    align-items: center;
+  }
 `;

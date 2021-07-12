@@ -133,3 +133,9 @@ table {
 :root {
   background-color: rgb(255, 255, 255);
 }
+
+@media (min-width: 400px) {
+  :root {
+    background-color: rgb(249, 248, 248);
+  }
+}
