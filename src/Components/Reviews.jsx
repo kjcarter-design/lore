@@ -36,5 +36,5 @@ const ContainerLi = styled.ul`
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   text-align: justify;
-  margin-left: 2rem;
+  margin-left: 1rem;
 `;

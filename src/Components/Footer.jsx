@@ -8,20 +8,26 @@ class Footer extends React.Component {
   render() {
     return (
       <Container>
-        <Lore src={Logo} alt="Lore Red" />
-        <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
-        <Title>info@lore.game</Title>
-        <KAmap src={Map} alt="Google Location" />
+        <Address>
+          <Lore src={Logo} alt="Lore Red" />
+          <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
+          <Title>info@lore.game</Title>
+          <KAmap src={Map} alt="Google Location" />
+        </Address>
         <Social />
-        <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
-        <Copyright>| All Rights Reserved |</Copyright>
-        <Copyright>Powered by Kenzie Games</Copyright>
-        <Terms>
-          <li>Privacy Policy</li>
-          <li>Terms of Service</li>
-          <li>Terms of Sale</li>
-          <li>Support</li>
-        </Terms>
+        <PolicyContainer>
+          <Policy>
+            <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
+            <Copyright>| All Rights Reserved |</Copyright>
+            <Copyright>Powered by Kenzie Games</Copyright>
+          </Policy>
+          <Terms>
+            <TermsLi>Privacy Policy</TermsLi>
+            <TermsLi>Terms of Service</TermsLi>
+            <TermsLi>Terms of Sale</TermsLi>
+            <TermsLi>Support</TermsLi>
+          </Terms>
+        </PolicyContainer>
       </Container>
     );
   }
@@ -77,4 +83,39 @@ const Terms = styled.ul`
   color: rgb(169, 169, 169);
   padding-bottom: 3rem;
   list-style: circle;
+  @media (min-width: 400px) {
+    justify-content: flex-end;
+    margin-top: 4rem;
+    padding: 2rem;
+  }
+`;
+
+const Policy = styled.div`
+  @media (min-width: 400px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: -4rem;
+  }
+`;
+
+const PolicyContainer = styled.div`
+  @media (min-width: 400px) {
+    background-color: rgb(78, 78, 78);
+  }
+`;
+
+const TermsLi = styled.li`
+  @media (min-width: 400px) {
+    margin-left: 2rem;
+  }
+`;
+
+const Address = styled.div`
+  @media (min-width: 400px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin-left: 10rem;
+  }
 `;

@@ -9,18 +9,18 @@ class Navbar extends React.Component {
     return (
       <Container>
         <Holder>
-          <Dot src={dice} alt="dice" />
+          <Dice src={dice} alt="dice" />
           <Current>Home</Current>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             How it Works
           </List>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             FAQ's
           </List>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             Contact Us
           </List>
           <Button>
@@ -49,6 +49,8 @@ const Container = styled.div`
   width: 100%;
   @media (min-width: 400px) {
     color: rgb(249, 248, 248);
+    margin-top: -5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
   }
 `;
 
@@ -62,17 +64,27 @@ const Holder = styled.ul`
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.05);
   @media (min-width: 400px) {
     margin-bottom: 2.5rem;
-    color: rgb(249, 248, 248);
+    color: rgb(241, 243, 233);
   }
 `;
 
 const List = styled.li`
   list-style: none;
   color: #8251eb;
+  @media (min-width: 400px) {
+    display: flex;
+    width: 100;
+    font-size: 1.5rem;
+  }
 `;
 
 const Current = styled.li`
   display: none;
+  @media (min-width: 400px) {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+  }
 `;
 
 const Sign = styled.button`
@@ -87,6 +99,7 @@ const Sign = styled.button`
     display: block;
     margin-left: 10rem;
     margin-right: -5rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -100,11 +113,14 @@ const Free = styled.button`
   width: max-content;
   margin-left: 0.75rem;
   border: none;
+  @media (min-width: 400px) {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 `;
 
-const Dot = styled.img`
-  width: 10%;
-  margin-right: 2px;
+const Dice = styled.img`
+  width: 5%;
 `;
 
 const Button = styled.span`

@@ -46,7 +46,7 @@ const Map = styled.img`
   top: -16rem;
   left: 1rem;
   @media (min-width: 400px) {
-    top: -20rem;
+    top: -35rem;
     left: 24.5rem;
     width: 60vw;
   }
