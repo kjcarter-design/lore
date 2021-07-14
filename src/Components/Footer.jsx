@@ -1,43 +1,121 @@
 import React from "react";
 import styled from "styled-components";
 import Social from "./Socials";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import Map from "./images/mobile-imgs/KenzieMap.svg";
+import Logo from "./images/mobile-imgs/Logo.svg";
 
 class Footer extends React.Component {
   render() {
     return (
-      <div>
-        <Social />
-        <Local>
+      <Container>
+        <Address>
+          <Lore src={Logo} alt="Lore Red" />
+          <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
           <Title>info@lore.game</Title>
-          <span>47 S Meridian St</span>
-          <span>Indianapolis, IN 46204</span>
-          {/* <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.4301190198685!2d-86.15974595956028!3d39.765908806623344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50bcfc165cc9%3A0x69702f2ad5bd15be!2s47%20S%20Meridian%20St%2C%20Indianapolis%2C%20IN%2046204!5e0!3m2!1sen!2sus!4v1625756522845!5m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe> */}
-        </Local>
-      </div>
+          <KAmap src={Map} alt="Google Location" />
+        </Address>
+        <Social />
+        <PolicyContainer>
+          <Policy>
+            <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
+            <Copyright>| All Rights Reserved |</Copyright>
+            <Copyright>Powered by Kenzie Games</Copyright>
+          </Policy>
+          <Terms>
+            <TermsLi>Privacy Policy</TermsLi>
+            <TermsLi>Terms of Service</TermsLi>
+            <TermsLi>Terms of Sale</TermsLi>
+            <TermsLi>Support</TermsLi>
+          </Terms>
+        </PolicyContainer>
+      </Container>
     );
   }
 }
 
 export default Footer;
 
-const Local = styled.p`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.5rem;
-  font-size: 1.25rem;
-  font-weight: bold;
+const Container = styled.div`
+  background-color: rgb(255, 255, 255);
 `;
 
-const Title = styled.span`
-  font-size: 2rem;
-  margin-bottom: 1rem;
+const Lore = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const Local = styled.p`
+  font-family: "Roboto" sans-serif;
+  margin-top: -1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+`;
+
+const Title = styled.h1`
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+`;
+
+const KAmap = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+`;
+
+const Copyright = styled.p`
+  color: rgb(169, 169, 169);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+`;
+
+const Terms = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6rem;
+  color: rgb(169, 169, 169);
+  padding-bottom: 3rem;
+  list-style: circle;
+  @media (min-width: 400px) {
+    justify-content: flex-end;
+    margin-top: 4rem;
+    padding: 2rem;
+  }
+`;
+
+const Policy = styled.div`
+  @media (min-width: 400px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: -4rem;
+  }
+`;
+
+const PolicyContainer = styled.div`
+  @media (min-width: 400px) {
+    background-color: rgb(78, 78, 78);
+  }
+`;
+
+const TermsLi = styled.li`
+  @media (min-width: 400px) {
+    margin-left: 2rem;
+  }
+`;
+
+const Address = styled.div`
+  @media (min-width: 400px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin-left: 10rem;
+  }
 `;

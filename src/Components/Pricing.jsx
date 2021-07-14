@@ -8,7 +8,7 @@ import yellowCheck from "./images/yellowCheck.svg";
 class Pricing extends React.Component {
   render() {
     return (
-      <div>
+      <Main>
         <Price>
           <h1>Affordable Pricing</h1>
           <Monthly>monthly</Monthly>
@@ -32,7 +32,7 @@ class Pricing extends React.Component {
                 <GreyChecked src={greyCheck} alt="grey check" />
                 Access to the battle map and public forums
               </li>
-              <button>Try for Free</button>
+              <Button>Try for Free</Button>
             </ul>
           </Forever>
           <Editor>
@@ -53,15 +53,19 @@ class Pricing extends React.Component {
                 <GreyChecked src={greenCheck} alt="green check" />
                 Custom homebrew campaign tool sets
               </li>
-              <GreenLi>
+              <QuoteLi>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Wider variety of customization for maps and characters
-              </GreenLi>
-              <GreenLi>
+                <blockquote>
+                  Wider variety of customization for maps and characters
+                </blockquote>
+              </QuoteLi>
+              <QuoteLi>
                 <GreyChecked src={greenCheck} alt="green check" />
-                Access 100+ assets including music and sound tracks for combat
-                and ambiance management
-              </GreenLi>
+                <blockquote>
+                  Access 100+ assets including music and sound tracks for combat
+                  and ambiance management
+                </blockquote>
+              </QuoteLi>
             </ul>
           </Editor>
           <Month>
@@ -89,16 +93,29 @@ class Pricing extends React.Component {
             </ul>
           </Month>
         </Container>
-      </div>
+      </Main>
     );
   }
 }
 
 export default Pricing;
 
+const Main = styled.div`
+  background-color: rgb(255, 255, 255);
+  margin-top: 2rem;
+`;
+
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  @media (min-width: 400px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
 
 const Price = styled.div`
@@ -106,6 +123,9 @@ const Price = styled.div`
   font-weight: 300;
   font-size: 2rem;
   text-align: center;
+  @media (min-width: 400px) {
+    font-weight: 600;
+  }
 `;
 
 const Monthly = styled.h3`
@@ -119,10 +139,14 @@ const Forever = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
+  margin-top: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+  }
 `;
 
 const Editor = styled.div`
@@ -131,11 +155,14 @@ const Editor = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(255, 232, 21, 0.5);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
   margin-top: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+  }
 `;
 
 const Month = styled.div`
@@ -144,14 +171,20 @@ const Month = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-  width: 25%;
+  width: 90%;
   height: 350px;
   list-style: none;
   line-height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  @media (min-width: 400px) {
+    width: 30%;
+    margin-bottom: 0;
+  }
 `;
 
 const Free = styled.div`
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-right: 0.25rem;
   text-transform: uppercase;
 `;
@@ -169,7 +202,17 @@ const GreyChecked = styled.img`
   margin-right: 10px;
 `;
 
-const GreenLi = styled.li`
-  line-height: 1rem;
-  width: 90%;
+const QuoteLi = styled.li`
+  display: flex;
+  line-height: 1.5rem;
+`;
+
+const Button = styled.button`
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 27, 71);
+  border-radius: 2px;
+  padding: 0.25rem;
+  border-style: none;
+  margin-top: 2rem;
+  margin-left: 7rem;
 `;

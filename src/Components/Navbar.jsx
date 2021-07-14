@@ -9,25 +9,27 @@ class Navbar extends React.Component {
     return (
       <Container>
         <Holder>
-          <Dot src={dice} alt="dice" />
+          <Dice src={dice} alt="dice" />
           <Current>Home</Current>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             How it Works
           </List>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             FAQ's
           </List>
           <List>
-            <Dot src={dotNavbar} alt="spacer" />
+            <img src={dotNavbar} alt="spacer" />
             Contact Us
           </List>
+          <Button>
+            <Sign>Sign In</Sign>
+          </Button>
+          <List>
+            <Free>Try for Free</Free>
+          </List>
         </Holder>
-        <Button>
-          <Sign>Sign In</Sign>
-          <Free>Try for Free</Free>
-        </Button>
       </Container>
     );
   }
@@ -42,24 +44,47 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  font-size: 0.7rem;
+  height: 10rem;
+  width: 100%;
+  @media (min-width: 400px) {
+    color: rgb(249, 248, 248);
+    margin-top: -5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  }
 `;
 
 const Holder = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
-  background-color: #f9f8f8;
-  position: relative;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  margin-top: 7.5rem;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.05);
+  @media (min-width: 400px) {
+    margin-bottom: 2.5rem;
+    color: rgb(241, 243, 233);
+  }
 `;
 
 const List = styled.li`
   list-style: none;
   color: #8251eb;
+  @media (min-width: 400px) {
+    display: flex;
+    width: 100;
+    font-size: 1.5rem;
+  }
 `;
 
 const Current = styled.li`
-  color: #000;
+  display: none;
+  @media (min-width: 400px) {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+  }
 `;
 
 const Sign = styled.button`
@@ -69,21 +94,36 @@ const Sign = styled.button`
   color: #111b47;
   border: none;
   width: max-content;
+  display: none;
+  @media (min-width: 400px) {
+    display: block;
+    margin-left: 10rem;
+    margin-right: -5rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const Free = styled.button`
   font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
   background-color: #111b47;
   color: #fff;
-  padding: 10px;
+  padding: 3px;
+  align-self: flex-end;
   width: max-content;
-  margin-left: 1rem;
+  margin-left: 0.75rem;
+  border: none;
+  @media (min-width: 400px) {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 `;
 
-const Dot = styled.img`
-  margin-right: 10px;
+const Dice = styled.img`
+  width: 5%;
 `;
 
 const Button = styled.span`
-  margin-left: 15rem;
+  display: inline;
+  margin-right: 1rem;
 `;

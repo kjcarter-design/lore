@@ -131,5 +131,11 @@ table {
 }
 
 :root {
-  background-color: #f9f8f8;
+  background-color: rgb(255, 255, 255);
+}
+
+@media (min-width: 400px) {
+  :root {
+    background-color: rgb(249, 248, 248);
+  }
 }

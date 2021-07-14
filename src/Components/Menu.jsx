@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Hero from "./Hero.jsx";
 import RedFlame from "../Components/images/RedFlame.svg";
 import Android from "../Components/images/Android.svg";
 import Appstore from "../Components/images/Appstore.svg";
@@ -9,12 +10,16 @@ class Menu extends React.Component {
   render() {
     return (
       <Tincan>
-        <img src={RedFlame} alt="red flame" />
-        <div>
-          <img src={Android} alt="android" class="fakeimg" />
-          <img src={Appstore} alt="appstore" class="fakeimg" />
-          <img src={Webapp} alt="webapp" class="fakeimg" />
-        </div>
+        <DiscordFlame>
+          <Flame src={RedFlame} alt="red flame" />
+          <Discord>Join our Discord</Discord>
+        </DiscordFlame>
+        <Hero />
+        <Locations>
+          <Image src={Android} alt="android" />
+          <Image src={Appstore} alt="appstore" />
+          <Image src={Webapp} alt="webapp" />
+        </Locations>
       </Tincan>
     );
   }
@@ -28,21 +33,34 @@ const Tincan = styled.div`
 `;
 
 const Flame = styled.img`
+  width: 100vw;
+  @media (min-width: 400px) {
+    margin-top: 2rem;
+  }
+`;
+
+const Discord = styled.p`
   text-align: center;
-  margin-left: 40rem;
+  color: rgb(255, 255, 255);
+  margin-top: -1.75rem;
+  @media (min-width: 400px) {
+    font-size: 2rem;
+    margin-top: -4rem;
+  }
 `;
 
-const Fakeimage = styled.img`
-  background-color: #aaa;
-  width: 100%;
-  padding: 1px;
+const DiscordFlame = styled.div`
+  display: inline-block;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 `;
 
-// const Loreloactions = styled.img`
-//   display: flex;
-//   width: 100%;
-//   padding-left: 2rem;
-//   justify-content: center;
-//   min-height: 5vh;
-//   align-items: center;
-// `;
+const Image = styled.img`
+  width: 30%;
+  margin-top: 2rem;
+`;
+
+const Locations = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
