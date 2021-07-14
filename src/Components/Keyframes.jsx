@@ -23,8 +23,6 @@ export default Keyframes;
 
 const Main = styled.div`
   @media (min-width: 400px) {
-    display: flex;
-    justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.07);
   }
 `;
@@ -32,23 +30,20 @@ const Main = styled.div`
 const DesktopImg = styled.img`
   display: hidden;
   @media (min-width: 400px) {
+    grid-area: character;
     display: block;
     width: 35vw;
-    margin-left: 1rem;
-    margin-top: -1rem;
+    align-self: center;
   }
 `;
 
 const Map = styled.img`
   width: 90%;
   margin: auto;
-  position: relative;
-  top: -16rem;
-  left: 1rem;
   @media (min-width: 400px) {
-    top: -35rem;
-    left: 24.5rem;
-    width: 60vw;
+    grid-area: map;
+    width: 55vw;
+    margin-top: 15rem;
   }
 `;
 
@@ -56,12 +51,18 @@ const Container = styled.div`
   margin-top: 2rem;
   background: rgba(0, 0, 0, 0.07) url(${BlueWolf}) no-repeat;
   width: 100vw;
-  height: 60vh;
-  position: relative;
+  height: auto;
   margin-bottom: 2rem;
   @media (min-width: 400px) {
     background: none;
-    height: 40vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "character map map"
+      "character join join";
+    align-items: center;
   }
 `;
 
@@ -69,11 +70,11 @@ const Join = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  position: relative;
   top: -12rem;
   @media (min-width: 400px) {
+    grid-area: join;
     font-size: 3rem;
-    margin-top: -30rem;
+    margin-top: -15rem;
   }
 `;
 
