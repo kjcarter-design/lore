@@ -4,6 +4,7 @@ import dice from "./images/dice.svg";
 import dotNavbar from "./images/dotNavbar.svg";
 import "../App.css";
 import { Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import FAQ from "./FAQ";
@@ -13,33 +14,53 @@ class Navbar extends React.Component {
   render() {
     return (
       <Container>
-        <Switch>
-          <Route path="/" exact link="/*/index.html 3000" />
-          <Route path="/about" exact component={Footer} />
-          <Route path="/faq" exact component={FAQ} />
-          <Route path="/try" exact component={Registration} />
-        </Switch>
         <Holder>
-          <Dice src={dice} alt="dice" />
-          <Current>Home</Current>
-          <List>
-            <img src={dotNavbar} alt="spacer" />
-            How it Works
-          </List>
-          <List>
-            <img src={dotNavbar} alt="spacer" />
-            FAQ's
-          </List>
-          <List>
-            <img src={dotNavbar} alt="spacer" />
-            Contact Us
-          </List>
-          <Button>
-            <Sign>Sign In</Sign>
-          </Button>
-          <List>
-            <Free>Try for Free</Free>
-          </List>
+          <NavLink>
+            <Switch>
+              <Dice src={dice} alt="dice" />
+              <Route>
+                <Current>Home</Current>
+              </Route>
+              <List>
+                <Route
+                  path="src/Components/Header.jsx"
+                  exact
+                  component={Header}
+                >
+                  <img src={dotNavbar} alt="spacer" />
+                  How it Works
+                </Route>
+              </List>
+              <List>
+                <Route path="src/Components/FAQ.jsx" exact component={FAQ}>
+                  <img src={dotNavbar} alt="spacer" />
+                  FAQ's
+                </Route>
+              </List>
+              <List>
+                <Route
+                  path="src/Components/Footer.jsx"
+                  exact
+                  component={Footer}
+                >
+                  <img src={dotNavbar} alt="spacer" />
+                  Contact Us
+                </Route>
+              </List>
+              <Button>
+                <Sign>Sign In</Sign>
+              </Button>
+              <List>
+                <Route
+                  path="src/Components/Registration.jsx"
+                  exact
+                  component={Registration}
+                >
+                  <Free>Try for Free</Free>
+                </Route>
+              </List>
+            </Switch>
+          </NavLink>
         </Holder>
       </Container>
     );
