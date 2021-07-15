@@ -9,6 +9,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FAQ from "./FAQ";
 import Registration from "./Registration";
+import Keyframes from "./Keyframes";
 
 class Navbar extends React.Component {
   render() {
@@ -18,31 +19,23 @@ class Navbar extends React.Component {
           <NavLink>
             <Switch>
               <Dice src={dice} alt="dice" />
-              <Route>
+              <Route path="./Header" exact component={Header}>
                 <Current>Home</Current>
               </Route>
               <List>
-                <Route
-                  path="src/Components/Header.jsx"
-                  exact
-                  component={Header}
-                >
+                <Route path="./Keyframes.jsx" exact component={Keyframes}>
                   <img src={dotNavbar} alt="spacer" />
                   How it Works
                 </Route>
               </List>
               <List>
-                <Route path="src/Components/FAQ.jsx" exact component={FAQ}>
+                <Route path="./FAQ.jsx" exact component={FAQ}>
                   <img src={dotNavbar} alt="spacer" />
                   FAQ's
                 </Route>
               </List>
               <List>
-                <Route
-                  path="src/Components/Footer.jsx"
-                  exact
-                  component={Footer}
-                >
+                <Route path="./Footer.jsx" exact component={Footer}>
                   <img src={dotNavbar} alt="spacer" />
                   Contact Us
                 </Route>
@@ -51,11 +44,7 @@ class Navbar extends React.Component {
                 <Sign>Sign In</Sign>
               </Button>
               <List>
-                <Route
-                  path="src/Components/Registration.jsx"
-                  exact
-                  component={Registration}
-                >
+                <Route path="./Registration.jsx" exact component={Registration}>
                   <Free>Try for Free</Free>
                 </Route>
               </List>
