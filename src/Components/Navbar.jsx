@@ -4,7 +4,7 @@ import dice from "./images/dice.svg";
 import dotNavbar from "./images/dotNavbar.svg";
 import "../App.css";
 import { Switch, Route } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import FAQ from "./FAQ";
@@ -16,40 +16,40 @@ class Navbar extends React.Component {
     return (
       <Container>
         <Holder>
-          <NavLink>
-            <Switch>
-              <Dice src={dice} alt="dice" />
-              <Route path="./Header" exact component={Header}>
-                <Current>Home</Current>
+          {/* <NavLink> */}
+          <Switch>
+            <Dice src={dice} alt="dice" />
+            <Route path="./Header" exact component={Header}>
+              <Current>Home</Current>
+            </Route>
+            <List>
+              <Route path="./Keyframes.jsx" exact component={Keyframes}>
+                <img src={dotNavbar} alt="spacer" />
+                How it Works
               </Route>
-              <List>
-                <Route path="./Keyframes.jsx" exact component={Keyframes}>
-                  <img src={dotNavbar} alt="spacer" />
-                  How it Works
-                </Route>
-              </List>
-              <List>
-                <Route path="./FAQ.jsx" exact component={FAQ}>
-                  <img src={dotNavbar} alt="spacer" />
-                  FAQ's
-                </Route>
-              </List>
-              <List>
-                <Route path="./Footer.jsx" exact component={Footer}>
-                  <img src={dotNavbar} alt="spacer" />
-                  Contact Us
-                </Route>
-              </List>
-              <Button>
-                <Sign>Sign In</Sign>
-              </Button>
-              <List>
-                <Route path="./Registration.jsx" exact component={Registration}>
-                  <Free>Try for Free</Free>
-                </Route>
-              </List>
-            </Switch>
-          </NavLink>
+            </List>
+            <List>
+              <Route path="./FAQ.jsx" exact component={FAQ}>
+                <img src={dotNavbar} alt="spacer" />
+                FAQ's
+              </Route>
+            </List>
+            <List>
+              <Route path="./Footer.jsx" exact component={Footer}>
+                <img src={dotNavbar} alt="spacer" />
+                Contact Us
+              </Route>
+            </List>
+            <Button>
+              <Sign>Sign In</Sign>
+            </Button>
+            <List>
+              <Route path="./Registration.jsx" exact component={Registration}>
+                <Free>Try for Free</Free>
+              </Route>
+            </List>
+          </Switch>
+          {/* </NavLink> */}
         </Holder>
       </Container>
     );

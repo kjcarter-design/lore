@@ -8,14 +8,25 @@ import Lore1stScreen from "./images/Lore1stScreen.svg";
 import MapScreen from "./images/mobile-imgs/map-screen.svg";
 
 class Slides extends React.Component {
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
   render() {
     return;
-    <Carousel
-    // showArrows={true}
-    // onChange={onChange}
-    // onClickItem={onClickItem}
-    // onClickThumb={onClickThumb}
-    >
+    <CarouselContainer>
+    <Carousel>
       <div>
         <img src={Lore1stScreen} alt="Lore" />
       </div>
@@ -32,7 +43,14 @@ class Slides extends React.Component {
         <img src={MapScreen} alt="Map" />
       </div>
     </Carousel>;
+    </CarouselContainer>
   }
 }
 
 export default Slides;
+
+const CarouselContainer = styled.div`
+max-width: 60%;`
+
+const MapScreen = styled.div`
+`
