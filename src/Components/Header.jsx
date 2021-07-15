@@ -53,7 +53,7 @@ const DesktopContainer = styled.div`
     grid-template-areas:
       "devices title ."
       "dragon dragon dragon";
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
   }
 `;
@@ -99,6 +99,7 @@ const Dragon = styled.img`
 const Devices = styled.img`
   grid-area: devices;
   width: 50%;
+  justify-self: center;
 `;
 
 const DeTiContainer = styled.div`
