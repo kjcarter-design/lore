@@ -11,20 +11,28 @@ class Header extends React.Component {
     return (
       <div>
         <DesktopContainer>
-          <DeTiContainer>
-            <Devices src={devices} alt="devices" />
-            <Title>The Time has come</Title>
-          </DeTiContainer>
-          <Dragon src={MainImage} alt="dragon" />
+          <DeTitle>
+            <DeTitleAssets>
+              <Devices src={devices} alt="Electronic Screens" />
+              <TitleButtons>
+                <SignUp>Try For Free</SignUp>
+                <Button>Learn More</Button>
+              </TitleButtons>
+            </DeTitleAssets>
+            <DeTitleText>The Time has come</DeTitleText>
+          </DeTitle>
+
+          <Navbar />
         </DesktopContainer>
+
         <Container>
-          {/* <div> */}
-          <Logo src={LogoWhite} alt="Lore Logo" />
-          <Title>The Time Has Come</Title>
-          {/* </div> */}
-          {/* <Button>Learn More</Button> */}
+          <Title>
+            <img src={LogoWhite} alt="Lore Logo" />
+            <TitleTxt>The Time Has Come</TitleTxt>
+            <Button>Learn More</Button>
+          </Title>
+          <Navbar />
         </Container>
-        <Navbar />
       </div>
     );
   }
@@ -33,77 +41,109 @@ class Header extends React.Component {
 export default Header;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url(${MainImg}) no-repeat center;
-  background-size: contain;
+  display: grid;
+  grid-template-rows: 3fr 0.5fr;
+  grid-template-areas:
+    "title"
+    "navbar";
+  height: 50vh;
   width: 100%;
   @media (min-width: 400px) {
     display: none;
   }
 `;
 
+const Title = styled.div`
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: url(${MainImg}) no-repeat center;
+  background-size: cover;
+`;
+
+const TitleTxt = styled.div`
+  justify-self: center;
+  margin-left: 3.2rem;
+  font-size: 1rem;
+  color: white;
+`;
+
+const Button = styled.button`
+  margin-top: 0.5rem;
+  margin-left: 5rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 27, 71);
+  border-radius: 5px;
+  border: solid 1px rgb(17, 27, 71);
+  font-size: 1rem;
+  padding: 0.5rem;
+  @media (min-width: 400px) {
+    margin: 0, 0, 0, 1rem;
+    font-size: 1.5rem;
+  }
+`;
+
+//desktop styles
+
 const DesktopContainer = styled.div`
   display: none;
   @media (min-width: 400px) {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 0.1fr;
     grid-template-areas:
-      "devices title ."
-      "dragon dragon dragon";
-    justify-content: space-around;
-    align-content: center;
+      "title"
+      "navbar";
   }
 `;
 
-// const Button = styled.button`
-//   display: block;
-//   background-color: rgb(255, 255, 255);
-//   color: rgb(17, 27, 71);
-//   border-radius: 5px;
-//   border-style: none;
-//   font-size: 5rem;
-// `;
-
-const Title = styled.p`
-  color: rgb(0, 0, 0);
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-left: 1.7rem;
-  margin-bottom: 1rem;
-  @media (min-width: 400px) {
-    grid-area: title;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 400;
-    justify-self: center;
-  }
-`;
-
-const Logo = styled.img`
-  width: 70%;
-  margin-top: 7rem;
-  margin-right: 4rem;
-`;
-
-const Dragon = styled.img`
-  grid-area: dragon;
+const DeTitle = styled.div`
+  grid-area: title;
+  display: flex;
+  flex-direction: row;
+  background: url(${MainImage}) no-repeat center;
+  background-size: cover;
+  height: 80vh;
   width: 100%;
-  margin-top: -11rem;
-  z-index: -1;
+`;
+
+const DeTitleAssets = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 4rem;
+`;
+
+const DeTitleText = styled.p`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  grid-area: title-text;
+  font-size: 2.5rem;
+  margin-top: 4rem;
+`;
+
+const TitleButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const SignUp = styled.button`
+  font-family: "Roboto", sans-serif;
+  background-color: #111b47;
+  color: #fff;
+  padding: 0.5rem;
+  align-self: flex-end;
+  width: max-content;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
 `;
 
 const Devices = styled.img`
-  grid-area: devices;
-  width: 50%;
-  justify-self: center;
-`;
-
-const DeTiContainer = styled.div`
-  display: flex;
-  margin-left: 2rem;
-  margin-bottom: -10rem;
+  z-index: 2;
+  top: 7rem;
 `;

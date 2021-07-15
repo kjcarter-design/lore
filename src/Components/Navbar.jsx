@@ -3,11 +3,22 @@ import styled from "styled-components";
 import dice from "./images/dice.svg";
 import dotNavbar from "./images/dotNavbar.svg";
 import "../App.css";
+import { Switch, Route } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import FAQ from "./FAQ";
+import Registration from "./Registration";
 
 class Navbar extends React.Component {
   render() {
     return (
       <Container>
+        <Switch>
+          <Route path="/" exact link="/*/index.html 3000" />
+          <Route path="/about" exact component={Footer} />
+          <Route path="/faq" exact component={FAQ} />
+          <Route path="/try" exact component={Registration} />
+        </Switch>
         <Holder>
           <Dice src={dice} alt="dice" />
           <Current>Home</Current>
@@ -39,17 +50,11 @@ export default Navbar;
 
 const Container = styled.div`
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
   font-size: 0.7rem;
-  height: 10rem;
   width: 100%;
   @media (min-width: 400px) {
     color: rgb(249, 248, 248);
-    margin-top: -5rem;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
   }
 `;
@@ -58,12 +63,11 @@ const Holder = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 10vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
-  margin-top: 7.5rem;
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.05);
   @media (min-width: 400px) {
-    margin-bottom: 2.5rem;
     color: rgb(241, 243, 233);
   }
 `;
@@ -71,6 +75,7 @@ const Holder = styled.ul`
 const List = styled.li`
   list-style: none;
   color: #8251eb;
+  font-size: 0.8rem;
   @media (min-width: 400px) {
     display: flex;
     width: 100;
@@ -109,9 +114,8 @@ const Free = styled.button`
   background-color: #111b47;
   color: #fff;
   padding: 3px;
-  align-self: flex-end;
   width: max-content;
-  margin-left: 0.75rem;
+  margin-right: 2rem;
   border: none;
   @media (min-width: 400px) {
     font-size: 1.5rem;
@@ -120,7 +124,10 @@ const Free = styled.button`
 `;
 
 const Dice = styled.img`
-  width: 5%;
+  width: 10%;
+  @media (min-width: 400px) {
+    width: 5%;
+  }
 `;
 
 const Button = styled.span`
