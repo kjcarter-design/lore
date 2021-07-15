@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import BlueWolf from "./images/mobile-imgs/blue-wolf.svg";
-import MapScreen from "./images/mobile-imgs/map-screen.svg";
+// import MapScreen from "./images/mobile-imgs/map-screen.svg";
+import KeyframesSlides from "./KeyframeSlides";
 
 class Keyframes extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class Keyframes extends React.Component {
       <Main>
         <Container>
           <DesktopImg src={BlueWolf} alt="Blue Wolf" />
-          <Map src={MapScreen} alt="Map Screen" />
+          <KeyframesSlides />
           <Join>
             Join <Epic>Epic</Epic> Battles
           </Join>
@@ -37,15 +38,15 @@ const DesktopImg = styled.img`
   }
 `;
 
-const Map = styled.img`
-  width: 90%;
-  margin: auto;
-  @media (min-width: 400px) {
-    grid-area: map;
-    width: 55vw;
-    margin-top: 15rem;
-  }
-`;
+// const Map = styled.img`
+//   width: 90%;
+//   margin: auto;
+//   @media (min-width: 400px) {
+//     grid-area: map;
+//     width: 55vw;
+//     margin-top: 15rem;
+//   }
+// `;
 
 const Container = styled.div`
   margin-top: 2rem;

@@ -20,7 +20,6 @@ function App() {
         <Pricing />
         <Faq />
         <Footer />
-        {/* <KeyframesSlides /> */}
       </BrowserRouter>
     </div>
   );

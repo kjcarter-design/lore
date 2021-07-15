@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar.jsx";
+// import Navbar from "./Navbar.jsx";
 import devices from "./images/Platforms.svg";
 import MainImage from "./images/MainImage.svg";
 import MainImg from "../Components/images/mobile-imgs/main-mobile.svg";
@@ -22,7 +22,7 @@ class Header extends React.Component {
             <DeTitleText>The Time has come</DeTitleText>
           </DeTitle>
 
-          <Navbar />
+          {/* <Navbar /> */}
         </DesktopContainer>
 
         <Container>
@@ -31,7 +31,7 @@ class Header extends React.Component {
             <TitleTxt>The Time Has Come</TitleTxt>
             <Button>Learn More</Button>
           </Title>
-          <Navbar />
+          {/* <Navbar /> */}
         </Container>
       </div>
     );

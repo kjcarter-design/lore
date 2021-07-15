@@ -8,49 +8,37 @@ import Lore1stScreen from "./images/Lore1stScreen.svg";
 import MapScreen from "./images/mobile-imgs/map-screen.svg";
 
 class Slides extends React.Component {
-  var slideIndex = 0;
-  showSlides();
-  
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
-
   render() {
-    return;
-    <CarouselContainer>
-    <Carousel>
-      <div>
-        <img src={Lore1stScreen} alt="Lore" />
-      </div>
-      <div>
-        <img src={Board} alt="Community Board" />
-      </div>
-      <div>
-        <img src={Creator} alt="Character Creator" />
-      </div>
-      <div>
-        <img src={ChAbilities} alt="Character Abilities" />
-      </div>
-      <div>
-        <img src={MapScreen} alt="Map" />
-      </div>
-    </Carousel>;
-    </CarouselContainer>
+    return (
+      <Container>
+        <Carousel>
+          <div>
+            <Slide src={Lore1stScreen} alt="Lore" />
+          </div>
+          <div>
+            <Slide src={Board} alt="Community Board" />
+          </div>
+          <div>
+            <Slide src={Creator} alt="Character Creator" />
+          </div>
+          <div>
+            <Slide src={ChAbilities} alt="Character Abilities" />
+          </div>
+          <div>
+            <Slide src={MapScreen} alt="Map" />
+          </div>
+        </Carousel>
+      </Container>
+    );
   }
 }
 
 export default Slides;
 
-const CarouselContainer = styled.div`
-max-width: 60%;`
+const Slide = styled.img`
+  width: 30%;
+`;
 
-const MapScreen = styled.div`
-`
+const Container = styled.div`
+  width: 60%;
+`;
