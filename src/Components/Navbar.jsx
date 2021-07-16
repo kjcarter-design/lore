@@ -114,6 +114,14 @@ const Current = styled.li`
   }
 `;
 
+const Spacer = styled.img`
+  display: none;
+`;
+
+const NavLink = styled.p`
+  margin-left: 0.7rem;
+`;
+
 const Sign = styled.button`
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -136,6 +144,12 @@ const Free = styled.button`
   background-color: #111b47;
   color: #fff;
   padding: 3px;
+<<<<<<< HEAD
+=======
+  align-self: flex-end;
+  position: relative;
+  right: 0.5rem;
+>>>>>>> 66e5176567cd5dc97b47f53125aec02b4b599b7f
   width: max-content;
   margin-right: 2rem;
   border: none;

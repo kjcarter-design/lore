@@ -5,6 +5,7 @@ import devices from "./images/Platforms.svg";
 import MainImage from "./images/MainImage.svg";
 import MainImg from "../Components/images/mobile-imgs/main-mobile.svg";
 import LogoWhite from "../Components/images/mobile-imgs/logo-white.svg";
+import Logo from "../Components/images/mobile-imgs/Logo.svg";
 
 class Header extends React.Component {
   render() {
@@ -15,11 +16,12 @@ class Header extends React.Component {
             <DeTitleAssets>
               <Devices src={devices} alt="Electronic Screens" />
               <TitleButtons>
-                <SignUp>Try For Free</SignUp>
+                {/* <SignUp>Try For Free</SignUp> */}
                 <Button>Learn More</Button>
               </TitleButtons>
             </DeTitleAssets>
-            <DeTitleText>The Time has come</DeTitleText>
+            <DeTitleText>The Time Has Come</DeTitleText>
+            {/* <LogoImg src={Logo} alt="Lore Logo" /> */}
           </DeTitle>
 
           <Navbar />
@@ -123,7 +125,7 @@ const DeTitleText = styled.p`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   grid-area: title-text;
   font-size: 2.5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
 
 const TitleButtons = styled.div`

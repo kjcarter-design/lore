@@ -8,25 +8,27 @@ class Footer extends React.Component {
   render() {
     return (
       <Container id="footer">
-        <Address>
+        <FooterTitle>
           <Lore src={Logo} alt="Lore Red" />
           <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
           <Title>info@lore.game</Title>
-          <KAmap src={Map} alt="Google Location" />
-        </Address>
+          <MapContainer>
+            <KAmap src={Map} alt="Google Location" />
+          </MapContainer>
+        </FooterTitle>
         <Social />
         <PolicyContainer>
-          <Policy>
+          <Trademarks>
             <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
             <Copyright>| All Rights Reserved |</Copyright>
             <Copyright>Powered by Kenzie Games</Copyright>
-          </Policy>
-          <Terms>
+          </Trademarks>
+          <Policies>
             <TermsLi>Privacy Policy</TermsLi>
             <TermsLi>Terms of Service</TermsLi>
             <TermsLi>Terms of Sale</TermsLi>
             <TermsLi>Support</TermsLi>
-          </Terms>
+          </Policies>
         </PolicyContainer>
       </Container>
     );
@@ -36,7 +38,23 @@ class Footer extends React.Component {
 export default Footer;
 
 const Container = styled.div`
-  background-color: rgb(255, 255, 255);
+  @media (min-width: 400px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "blank, Title, Map";
+  }
+`;
+
+const FooterTitle = styled.div`
+  grid-area: Title;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  @media (min-width: 400px) {
+    margin-bottom: 10rem;
+  }
 `;
 
 const Lore = styled.img`
@@ -60,11 +78,46 @@ const Title = styled.h1`
   text-align: center;
 `;
 
+const MapContainer = styled.div`
+  grid-area: Map;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-right: 0;
+`;
+
 const KAmap = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  margin-right: 0;
+  justify-self: center;
+  align-self: center;
+`;
+
+const Socials = styled.div`
+  grid-area: Title;
+  @media (min-width: 400px) {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+  }
+`;
+
+const PolicyContainer = styled.div`
+  @media (min-width: 400px) {
+    grid-area: Footer;
+    background-color: rgb(78, 78, 78);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 0.5rem;
+  }
+`;
+
+const Trademarks = styled.div`
+  @media (min-width: 400px) {
+    display: flex;
+  } ;
 `;
 
 const Copyright = styled.p`
@@ -75,47 +128,20 @@ const Copyright = styled.p`
   margin-bottom: 1.5rem;
 `;
 
-const Terms = styled.ul`
+const Policies = styled.ul`
   display: flex;
-  justify-content: space-evenly;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.6rem;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem;
   color: rgb(169, 169, 169);
-  padding-bottom: 3rem;
-  list-style: circle;
-  @media (min-width: 400px) {
-    justify-content: flex-end;
-    margin-top: 4rem;
-    padding: 2rem;
-  }
-`;
-
-const Policy = styled.div`
   @media (min-width: 400px) {
     display: flex;
-    justify-content: flex-start;
-    margin-bottom: -4rem;
-  }
-`;
-
-const PolicyContainer = styled.div`
-  @media (min-width: 400px) {
-    background-color: rgb(78, 78, 78);
-  }
+  } ;
 `;
 
 const TermsLi = styled.li`
+  margin: 0.5rem;
   @media (min-width: 400px) {
     margin-left: 2rem;
-  }
-`;
-
-const Address = styled.div`
-  @media (min-width: 400px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    margin-left: 10rem;
   }
 `;

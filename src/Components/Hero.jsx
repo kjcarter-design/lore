@@ -22,21 +22,26 @@ class Hero extends React.Component {
 
 export default Hero;
 
-const Video = styled.iframe`
-  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.25);
-  border: transparent;
-  width: 90%;
-  margin-left: 1rem;
-  @media (min-width: 400px) {
-    width: 400px;
-    height: 300px;
-  }
-`;
-
 const Container = styled.div`
-  background-color: rgb(253, 251, 251);
+  background: rgba(150, 150, 150, 0.2);
+  margin-top: 2rem;
   @media (min-width: 400px) {
     display: flex;
     align-items: center;
+  }
+`;
+
+const Video = styled.iframe`
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  width: 90%;
+  margin-left: 1rem;
+  position: relative;
+  top: -2rem;
+  @media (min-width: 400px) {
+    position: relative;
+    top: -2rem;
+    width: 636.19px;
+    height: 408px;
   }
 `;

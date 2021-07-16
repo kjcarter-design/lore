@@ -1,6 +1,8 @@
 import React from "react";
 // import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
+import OpenQuote from "../Components/images/openquote.png";
+import CloseQuote from "../Components/images/closequote.png";
 
 class Reviews extends React.Component {
   render() {

@@ -36,6 +36,7 @@ const Flame = styled.img`
   width: 100vw;
   @media (min-width: 400px) {
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -45,14 +46,18 @@ const Discord = styled.p`
   margin-top: -1.75rem;
   @media (min-width: 400px) {
     font-size: 2rem;
-    margin-top: -4rem;
+    margin-top: -6rem;
   }
 `;
 
 const DiscordFlame = styled.div`
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  @media (min-width: 400px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 const Image = styled.img`
