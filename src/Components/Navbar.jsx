@@ -89,7 +89,7 @@ const Holder = styled.ul`
 
 const List = styled.li`
   list-style: none;
-  color: #8251eb;
+  color: rgb(130, 81, 235);
   font-size: 0.8rem;
   @media (min-width: 400px) {
     display: flex;
