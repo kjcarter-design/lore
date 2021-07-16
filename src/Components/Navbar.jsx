@@ -12,16 +12,16 @@ class Navbar extends React.Component {
           <Dice src={dice} alt="dice" />
           <Current>Home</Current>
           <List>
-            <img src={dotNavbar} alt="spacer" />
-            How it Works
+            <Spacer src={dotNavbar} alt="spacer" />
+            <NavLink>How it Works</NavLink>
           </List>
           <List>
-            <img src={dotNavbar} alt="spacer" />
-            FAQ's
+            <Spacer src={dotNavbar} alt="spacer" />
+            <NavLink>FAQ's</NavLink>
           </List>
           <List>
-            <img src={dotNavbar} alt="spacer" />
-            Contact Us
+            <Spacer src={dotNavbar} alt="spacer" />
+            <NavLink>Contact Us</NavLink>
           </List>
           <Button>
             <Sign>Sign In</Sign>
@@ -81,6 +81,14 @@ const Current = styled.li`
   }
 `;
 
+const Spacer = styled.img`
+  display: none;
+`;
+
+const NavLink = styled.p`
+  margin-left: 0.7rem;
+`;
+
 const Sign = styled.button`
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -104,6 +112,8 @@ const Free = styled.button`
   color: #fff;
   padding: 3px;
   align-self: flex-end;
+  position: relative;
+  right: 0.5rem;
   width: max-content;
   margin-left: 0.75rem;
   border: none;

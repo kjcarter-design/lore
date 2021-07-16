@@ -9,10 +9,12 @@ class Keyframes extends React.Component {
       <Main>
         <Container>
           <DesktopImg src={BlueWolf} alt="Blue Wolf" />
-          <Map src={MapScreen} alt="Map Screen" />
-          <Join>
-            Join <Epic>Epic</Epic> Battles
-          </Join>
+          <div>
+            <Map src={MapScreen} alt="Map Screen" />
+            <Join>
+              Join <Epic>Epic</Epic> Battles
+            </Join>
+          </div>
         </Container>
       </Main>
     );
@@ -34,8 +36,8 @@ const DesktopImg = styled.img`
   @media (min-width: 400px) {
     display: block;
     width: 35vw;
-    margin-left: 1rem;
-    margin-top: -1rem;
+    position: relative;
+    top: -7rem;
   }
 `;
 
@@ -46,8 +48,9 @@ const Map = styled.img`
   top: -16rem;
   left: 1rem;
   @media (min-width: 400px) {
-    top: -35rem;
-    left: 24.5rem;
+    top: 2rem;
+    left: 0;
+    margin-right: 0.5rem;
     width: 60vw;
   }
 `;
@@ -61,7 +64,9 @@ const Container = styled.div`
   margin-bottom: 2rem;
   @media (min-width: 400px) {
     background: none;
-    height: 40vh;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -73,7 +78,8 @@ const Join = styled.p`
   top: -12rem;
   @media (min-width: 400px) {
     font-size: 3rem;
-    margin-top: -30rem;
+    position: relative;
+    top: 3rem;
   }
 `;
 

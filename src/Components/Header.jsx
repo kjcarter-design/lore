@@ -16,7 +16,7 @@ class Header extends React.Component {
             <DeTitleAssets>
               <Devices src={devices} alt="Electronic Screens" />
               <TitleButtons>
-                <SignUp>Try For Free</SignUp>
+                {/* <SignUp>Try For Free</SignUp> */}
                 <Button>Learn More</Button>
               </TitleButtons>
             </DeTitleAssets>
