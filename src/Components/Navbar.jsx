@@ -3,61 +3,27 @@ import styled from "styled-components";
 import dice from "./images/dice.svg";
 import dotNavbar from "./images/dotNavbar.svg";
 import "../App.css";
-import { Switch, Route } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import Header from "./Header";
-import Footer from "./Footer";
-import FAQ from "./FAQ";
-import Registration from "./Registration";
-import Keyframes from "./Keyframes";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import FAQ from "./FAQ";
+// import Registration from "./Registration";
+// import Keyframes from "./Keyframes";
 
 class Navbar extends React.Component {
   render() {
     return (
       <Container>
         <Holder>
-          {/* <Switch>
-            <Dice src={dice} alt="dice" />
-            <Route path="/header" exact component={Header}>
-              <Current>Home</Current>
-            </Route>
-
-            <Route path="/keyframes" exact component={Keyframes}>
-              <List>
-                <img src={dotNavbar} alt="spacer" />
-                How it Works
-              </List>
-            </Route>
-
-            <Route path="/faq" exact component={FAQ}>
-              <List>
-                <img src={dotNavbar} alt="spacer" />
-                FAQ's
-              </List>
-            </Route>
-
-            <Route path="/footer" exact component={Footer}>
-              <List>
-                <img src={dotNavbar} alt="spacer" />
-                Contact Us
-              </List>
-            </Route>
-
-            <Button>
-              <Sign>Sign In</Sign>
-            </Button>
-
-            <Route path="./registration" exact component={Registration}>
-              <List>
-                <Free>Try for Free</Free>
-              </List>
-            </Route>
-          </Switch> */}
           <List>
+            <Dice src={dice} alt="Logo" />
+            <Spacer src={dotNavbar} alt="circle" />
             <HashLink to={"#home"}>Home</HashLink>
+            <Spacer src={dotNavbar} alt="circle" />
             <HashLink to={"#keyframes"}>How it Works</HashLink>
+            <Spacer src={dotNavbar} alt="circle" />
             <HashLink to={"#faq"}>FAQ's</HashLink>
+            <Spacer src={dotNavbar} alt="circle" />
             <HashLink to={"#footer"}>Contact Us</HashLink>
             <HashLink to={"#registration"}>Sign In</HashLink>
             <HashLink to={"#registration"}>Try for Free</HashLink>
@@ -105,59 +71,49 @@ const List = styled.li`
   }
 `;
 
-const Current = styled.li`
-  display: none;
-  @media (min-width: 400px) {
-    display: block;
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-  }
-`;
+// const Current = styled.li`
+//   display: none;
+//   @media (min-width: 400px) {
+//     display: block;
+//     color: rgb(0, 0, 0);
+//     font-size: 1.5rem;
+//   }
+// `;
 
 const Spacer = styled.img`
   display: none;
 `;
 
-const NavLink = styled.p`
-  margin-left: 0.7rem;
-`;
+// const Sign = styled.button`
+//   font-family: "Roboto", sans-serif;
+//   font-size: 1.2rem;
+//   background-color: transparent;
+//   color: #111b47;
+//   border: none;
+//   width: max-content;
+//   display: none;
+//   @media (min-width: 400px) {
+//     display: block;
+//     margin-left: 10rem;
+//     margin-right: -5rem;
+//     font-size: 1.5rem;
+//   }
+// `;
 
-const Sign = styled.button`
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  background-color: transparent;
-  color: #111b47;
-  border: none;
-  width: max-content;
-  display: none;
-  @media (min-width: 400px) {
-    display: block;
-    margin-left: 10rem;
-    margin-right: -5rem;
-    font-size: 1.5rem;
-  }
-`;
-
-const Free = styled.button`
-  font-family: "Roboto", sans-serif;
-  font-size: 0.7rem;
-  background-color: #111b47;
-  color: #fff;
-  padding: 3px;
-<<<<<<< HEAD
-=======
-  align-self: flex-end;
-  position: relative;
-  right: 0.5rem;
->>>>>>> 66e5176567cd5dc97b47f53125aec02b4b599b7f
-  width: max-content;
-  margin-right: 2rem;
-  border: none;
-  @media (min-width: 400px) {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-`;
+// const Free = styled.button`
+//   font-family: "Roboto", sans-serif;
+//   font-size: 0.7rem;
+//   background-color: #111b47;
+//   color: #fff;
+//   padding: 3px;
+//   width: max-content;
+//   margin-right: 2rem;
+//   border: none;
+//   @media (min-width: 400px) {
+//     font-size: 1.5rem;
+//     padding: 0.5rem;
+//   }
+// `;
 
 const Dice = styled.img`
   width: 10%;
@@ -166,7 +122,7 @@ const Dice = styled.img`
   }
 `;
 
-const Button = styled.span`
-  display: inline;
-  margin-right: 1rem;
-`;
+// const Button = styled.span`
+//   display: inline;
+//   margin-right: 1rem;
+// `;

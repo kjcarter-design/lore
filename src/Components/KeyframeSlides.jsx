@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CharacterSheet from "./images/Character-Sheet.png";
 import CharacterSelector from "./images/Character-Selector.png";
-import Board from "./images/Community.png";
+import Board from "./images/Community-Board.png";
 import Lore1stScreen from "./images/Main-Screen.png";
 import MapScreen from "./images/Battle-Map.png";
 
@@ -37,18 +37,17 @@ class Slides extends React.Component {
   render() {
     return (
       <div id="Slide">
-        <Container>
-          {this.slideData.map((slide, i) => (
-            <Slide
-              key={"slide" + i}
-              src={slide.img}
-              alt={slide.altTxt}
-              isCurrentSlide={this.state.currentSlideIndex === i}
-            />
-          ))}
-          <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
-          <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
-        </Container>
+        <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
+        {this.slideData.map((slide, i) => (
+          <Slide
+            key={"slide" + i}
+            src={slide.img}
+            alt={slide.altTxt}
+            isCurrentSlide={this.state.currentSlideIndex === i}
+          />
+        ))}
+
+        <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
 
         <div>
           {this.slideData.map((_, i) => (
@@ -66,33 +65,27 @@ class Slides extends React.Component {
 export default Slides;
 
 const Slide = styled.img`
-  width: 60%;
+  width: max-content;
+  height: max-content;
+  margin: 2rem;
   display: ${(props) => (props.isCurrentSlide ? "block" : "hidden")};
-`;
-
-const Container = styled.div`
-  display: flex;
-  width: 60%;
-  height: auto;
-  padding: 1rem;
-  border: 5px ridge rgb(17, 27, 71);
 `;
 
 const ArrowLeft = styled.a`
   cursor: pointer;
   margin-top: 5rem;
   width: auto;
-  /* margin-top: -22px; */
-  /* padding: 16px; */
   color: rgb(130, 81, 235);
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 3rem;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+
   user-select: none;
 
   :hover {
     background-color: rgba(0, 0, 0, 0.8);
+    height: 3.5rem;
+    border-radius: 0 3px 3px 0;
   }
 `;
 
@@ -100,17 +93,16 @@ const ArrowRight = styled.a`
   cursor: pointer;
   margin-top: 5rem;
   width: auto;
-  margin-top: -15px;
-  padding: 16px;
   color: rgb(130, 81, 235);
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 3rem;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 
   :hover {
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 3px 3px 0;
+    height: 3.5rem;
   }
 `;
 
