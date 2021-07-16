@@ -7,7 +7,7 @@ import Logo from "./images/mobile-imgs/Logo.svg";
 class Footer extends React.Component {
   render() {
     return (
-      <Container>
+      <Container id="footer">
         <Address>
           <Lore src={Logo} alt="Lore Red" />
           <Local>47 S Meridian St, Indianapolis, IN 46204</Local>

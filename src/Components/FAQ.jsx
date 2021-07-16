@@ -38,7 +38,7 @@ import Nec from "./images/mobile-imgs/nec.svg";
 class Faq extends React.Component {
   render() {
     return (
-      <FaqContainer>
+      <FaqContainer id="faq">
         <FaqWrapper>
           <QuestionWrapper>
             <OpenQuote>"</OpenQuote>

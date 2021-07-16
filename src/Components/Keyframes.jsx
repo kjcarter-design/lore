@@ -7,7 +7,7 @@ import KeyframesSlides from "./KeyframeSlides";
 class Keyframes extends React.Component {
   render() {
     return (
-      <Main>
+      <Main id="keyframes">
         <Container>
           <DesktopImg src={BlueWolf} alt="Blue Wolf" />
           <KeyframesSlides />

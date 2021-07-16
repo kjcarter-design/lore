@@ -4,32 +4,54 @@ import styled from "styled-components";
 
 class Reviews extends React.Component {
   render() {
+    state = {
+      currentSlideIndex: 0,
+    };
+
+    slideData = [
+      {
+        img: Lore1stScreen,
+        altTxt: "Lore",
+      },
+      {
+        img: Board,
+        altTxt: "Community Board",
+      },
+      {
+        img: CharacterSelector,
+        altTxt: "Character Selector",
+      },
+      {
+        img: CharacterSheet,
+        altTxt: "Character Abilities",
+      },
+      {
+        img: MapScreen,
+        altTxt: "Battle Map",
+      },
+    ];
     return (
       <div>
         <Container>
-          <Review>
-            <p>
-              "Lore brings the fight to your fingers. Fight with legends and
-              explore new lands. Each quest requires speed, knowledge but most
-              importantly it requires heart."
-            </p>
-            <p> &#8213; John Smith</p>
-          </Review>
-          <Review>
-            <p>
-              "Lore brings the fight to your fingers. Fight with legends and
-              explore new lands. Each quest requires speed, knowledge but most
-              importantly it requires heart."
-            </p>
-            <p> &#8213; John Smith</p>
-          </Review>
-          <Arrows onclick="plusSlides(-1)">&#10094;</Arrows>
-          <Arrows onclick="plusSlides(1)">&#10095;</Arrows>
+          {this.slideData.map((slide, i) => (
+            <Slide
+              key={"slide" + i}
+              src={slide.img}
+              alt={slide.altTxt}
+              isCurrentSlide={this.state.currentSlideIndex === i}
+            />
+          ))}
+          <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
+          <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
         </Container>
+
         <div>
-          <Dots onclick="currentSlide(1)"></Dots>
-          <Dots onclick="currentSlide(2)"></Dots>
-          <Dots onclick="currentSlide(3)"></Dots>
+          {this.slideData.map((_, i) => (
+            <Dots
+              key={"dot" + i}
+              onClick={() => this.setState({ currentSlideIndex: i })}
+            />
+          ))}
         </div>
       </div>
     );
@@ -38,20 +60,42 @@ class Reviews extends React.Component {
 
 export default Reviews;
 
+const Slide = styled.img`
+  width: 60%;
+  display: ${(props) => (props.isCurrentSlide ? "block" : "hidden")};
+`;
+
 const Container = styled.div`
-  width: 60vw;
+  display: flex;
+  width: 60%;
+  height: auto;
+  padding: 1rem;
+  border: 5px ridge rgb(17, 27, 71);
 `;
 
-const Review = styled.div`
-  display: block;
-`;
-
-const Arrows = styled.a`
+const ArrowLeft = styled.a`
   cursor: pointer;
-  position: absolute;
-  top: 50%;
+  margin-top: 5rem;
   width: auto;
-  margin-top: --22px;
+  /* margin-top: -22px; */
+  /* padding: 16px; */
+  color: rgb(130, 81, 235);
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+  :hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+`;
+
+const ArrowRight = styled.a`
+  cursor: pointer;
+  margin-top: 5rem;
+  width: auto;
+  margin-top: -15px;
   padding: 16px;
   color: rgb(130, 81, 235);
   font-weight: bold;
@@ -69,7 +113,8 @@ const Dots = styled.span`
   cursor: pointer;
   height: 1rem;
   width: 1rem;
-  margin: 0 2px;
+  margin-left: 4.8rem;
+  margin-top: 1rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
