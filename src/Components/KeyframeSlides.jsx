@@ -1,123 +1,69 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
-import CharacterSheet from "./images/Character-Sheet.png";
-import CharacterSelector from "./images/Character-Selector.png";
-import Board from "./images/Community-Board.png";
-import Lore1stScreen from "./images/Main-Screen.png";
-import MapScreen from "./images/Battle-Map.png";
 
-class Slides extends React.Component {
-  state = {
-    currentSlideIndex: 0,
-  };
-
-  slideData = [
-    {
-      img: Lore1stScreen,
-      altTxt: "Lore",
-    },
-    {
-      img: Board,
-      altTxt: "Community Board",
-    },
-    {
-      img: CharacterSelector,
-      altTxt: "Character Selector",
-    },
-    {
-      img: CharacterSheet,
-      altTxt: "Character Abilities",
-    },
-    {
-      img: MapScreen,
-      altTxt: "Battle Map",
-    },
-  ];
-
-  render() {
-    return (
-      <div id="Slide">
-        <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
-        {this.slideData.map((slide, i) => (
-          <Slide
-            key={"slide" + i}
-            src={slide.img}
-            alt={slide.altTxt}
-            isCurrentSlide={this.state.currentSlideIndex === i}
-          />
-        ))}
-
-        <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
-
+export default function KeyFramesComponent() {
+  return (
+    <CarouselContainer>
+      <Carousel infiniteLoop useKeyboardArrows autoPlay>
         <div>
-          {this.slideData.map((_, i) => (
-            <Dots
-              key={"dot" + i}
-              onClick={() => this.setState({ currentSlideIndex: i })}
-            />
-          ))}
+          <Slide src="../Main-Screen.png" alt="Start up" />
+          <Writing>
+            Jump right into the game by creating your own campaign world,
+            favorite new character or dynamic battlemap!
+          </Writing>
         </div>
-      </div>
-    );
-  }
+        <div>
+          <Slide src="../Character-Selector.png" alt="Choose Character" />
+          <Writing>
+            Create, edit, and assemble all your incredible heroes. Even share
+            your favorites with friends!
+          </Writing>
+        </div>
+        <div>
+          <Slide src="../Character-Sheet.png" alt="Character Abilities" />
+          <Writing>
+            View all of character's stats, abilities, and feats. Edit and tweak
+            them until your hearts content!
+          </Writing>
+        </div>
+        <div>
+          <Slide src="../Battle-Map.png" alt="Battle Map" />
+          <Writing>
+            Implement the maps you create with our dynamic battle map. Share
+            your favorites with the community also!
+          </Writing>
+        </div>
+        <div>
+          <Slide src="../Community-Board.png" alt="Community Involvement" />
+          <Writing>
+            See what the community is up to and share your thoughts. Meet up
+            with new players looking to join your epic quest!
+          </Writing>
+        </div>
+      </Carousel>
+    </CarouselContainer>
+  );
 }
 
-export default Slides;
-
+const CarouselContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+`;
 const Slide = styled.img`
-  width: max-content;
-  height: max-content;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin: 2rem;
-  display: ${(props) => (props.isCurrentSlide ? "block" : "hidden")};
 `;
 
-const ArrowLeft = styled.a`
-  cursor: pointer;
-  margin-top: 5rem;
-  width: auto;
-  color: rgb(130, 81, 235);
-  font-weight: bold;
-  font-size: 3rem;
-  transition: 0.6s ease;
-
-  user-select: none;
-
-  :hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    height: 3.5rem;
-    border-radius: 0 3px 3px 0;
-  }
-`;
-
-const ArrowRight = styled.a`
-  cursor: pointer;
-  margin-top: 5rem;
-  width: auto;
-  color: rgb(130, 81, 235);
-  font-weight: bold;
-  font-size: 3rem;
-  transition: 0.6s ease;
-  user-select: none;
-
-  :hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0 3px 3px 0;
-    height: 3.5rem;
-  }
-`;
-
-const Dots = styled.span`
-  cursor: pointer;
-  height: 1rem;
-  width: 1rem;
-  margin-left: 4.8rem;
-  margin-top: 1rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-
-  :hover {
-    background-color: rgb(113, 113, 113);
-  }
+const Writing = styled.p`
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(17, 27, 71);
+  margin-left: 3.5rem;
 `;
