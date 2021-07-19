@@ -95,14 +95,6 @@ const KAmap = styled.img`
   align-self: center;
 `;
 
-// const Socials = styled.div`
-//   grid-area: Title;
-//   @media (min-width: 400px) {
-//     align-self: flex-end;
-//     margin-bottom: 1rem;
-//   }
-// `;
-
 const PolicyContainer = styled.div`
   @media (min-width: 400px) {
     grid-area: Footer;

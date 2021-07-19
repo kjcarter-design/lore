@@ -12,7 +12,7 @@ class Keyframes extends React.Component {
           <Join>
             Join <Epic>Epic</Epic> Battles
           </Join>
-          <KeyframesSlides />
+          {/* <KeyframesSlides /> */}
         </Container>
       </Main>
     );
