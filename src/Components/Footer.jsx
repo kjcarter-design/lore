@@ -7,28 +7,7 @@ import Logo from "./images/mobile-imgs/Logo.svg";
 class Footer extends React.Component {
   render() {
     return (
-      // <Container>
-      //   <Address>
-      // <Lore src={Logo} alt="Lore Red" />
-      // <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
-      // <Title>info@lore.game</Title>
-      //     <KAmap src={Map} alt="Google Location" />
-      //   </Address>
-      //   <Social />
-      //   <PolicyContainer>
-      //     <Policy>
-      //       <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
-      //       <Copyright>| All Rights Reserved |</Copyright>
-      //       <Copyright>Powered by Kenzie Games</Copyright>
-      //     </Policy>
-      //     <Terms>
-      //       <TermsLi>Privacy Policy</TermsLi>
-      //       <TermsLi>Terms of Service</TermsLi>
-      //       <TermsLi>Terms of Sale</TermsLi>
-      //       <TermsLi>Support</TermsLi>
-      //     </Terms>
-      //   </PolicyContainer>
-      // </Container>
+     
       <div>
         <Container>
           <FooterTitle>
@@ -105,6 +84,7 @@ const Title = styled.h1`
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 `;
 
@@ -175,46 +155,3 @@ const TermsLi = styled.li`
     margin-left: 2rem;
   }
 `;
-// const Container = styled.div`
-//   background-color: rgb(255, 255, 255);
-// `;
-
-// const Title = styled.h1`
-//   font-family: "Roboto", sans-serif;
-//   font-size: 1.5rem;
-//   margin-top: 1.5rem;
-//   text-align: center;
-// `;
-
-// const Terms = styled.ul`
-//   display: flex;
-//   justify-content: space-evenly;
-//   font-family: "Roboto", sans-serif;
-//   font-size: 0.6rem;
-//   color: rgb(169, 169, 169);
-//   padding-bottom: 3rem;
-//   list-style: circle;
-//   @media (min-width: 400px) {
-//     justify-content: flex-end;
-//     margin-top: 4rem;
-//     padding: 2rem;
-//   }
-// `;
-
-// const Policy = styled.div`
-//   @media (min-width: 400px) {
-//     display: flex;
-//     justify-content: flex-start;
-//     margin-bottom: -4rem;
-//   }
-// `;
-
-// const Address = styled.div`
-//   @media (min-width: 400px) {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     width: 70%;
-//     margin-left: 10rem;
-//   }
-// `;
