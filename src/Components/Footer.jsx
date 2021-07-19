@@ -12,6 +12,16 @@ class Footer extends React.Component {
           <Lore src={Logo} alt="Lore Red" />
           <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
           <Title>info@lore.game</Title>
+
+     
+      <div>
+        <Container>
+          <FooterTitle>
+            <Lore src={Logo} alt="Lore Red" />
+            <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
+            <Title>info@lore.game</Title>
+          </FooterTitle>
+
           <MapContainer>
             <KAmap src={Map} alt="Google Location" />
           </MapContainer>
@@ -75,6 +85,7 @@ const Title = styled.h1`
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 `;
 
