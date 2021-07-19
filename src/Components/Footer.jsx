@@ -7,6 +7,12 @@ import Logo from "./images/mobile-imgs/Logo.svg";
 class Footer extends React.Component {
   render() {
     return (
+      <Container id="footer">
+        <FooterTitle>
+          <Lore src={Logo} alt="Lore Red" />
+          <Local>47 S Meridian St, Indianapolis, IN 46204</Local>
+          <Title>info@lore.game</Title>
+
      
       <div>
         <Container>
@@ -19,12 +25,8 @@ class Footer extends React.Component {
           <MapContainer>
             <KAmap src={Map} alt="Google Location" />
           </MapContainer>
-
-          <Socials>
-            <Social />
-          </Socials>
-        </Container>
-
+        </FooterTitle>
+        <Social />
         <PolicyContainer>
           <Trademarks>
             <Copyright>© 2021 Lore: Kenzie Studios Entertainment</Copyright>
@@ -38,7 +40,7 @@ class Footer extends React.Component {
             <TermsLi>Support</TermsLi>
           </Policies>
         </PolicyContainer>
-      </div>
+      </Container>
     );
   }
 }
@@ -49,8 +51,7 @@ const Container = styled.div`
   @media (min-width: 400px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-    grid-template-areas: "blank Title Map";
+    grid-template-areas: "blank, Title, Map";
   }
 `;
 
@@ -105,13 +106,13 @@ const KAmap = styled.img`
   align-self: center;
 `;
 
-const Socials = styled.div`
-  grid-area: Title;
-  @media (min-width: 400px) {
-    align-self: flex-end;
-    margin-bottom: 1rem;
-  } ;
-`;
+// const Socials = styled.div`
+//   grid-area: Title;
+//   @media (min-width: 400px) {
+//     align-self: flex-end;
+//     margin-bottom: 1rem;
+//   }
+// `;
 
 const PolicyContainer = styled.div`
   @media (min-width: 400px) {

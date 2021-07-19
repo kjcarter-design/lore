@@ -5,7 +5,11 @@ import Header from "./Components/Header.jsx";
 import Pricing from "./Components/Pricing.jsx";
 import Menu from "./Components/Menu.jsx";
 import Keyframes from "./Components/Keyframes.jsx";
-import Faq from "./Components/FAQ.jsx";
+import FAQ from "./Components/FAQ.jsx";
+
+// import Registration from "./Components/Registration";
+
+// import KeyframesSlides from "./Components/KeyframeSlides.jsx";
 
 function App() {
   return (
@@ -14,7 +18,7 @@ function App() {
       <Menu />
       <Keyframes />
       <Pricing />
-      <Faq />
+      <FAQ />
       <Footer />
     </div>
   );

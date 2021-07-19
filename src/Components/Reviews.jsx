@@ -1,9 +1,52 @@
-import React from "react";
-import IGN from "../Components/images/IGN.svg";
-import styled from "styled-components";
-import OpenQuote from "../Components/images/openquote.png";
-import CloseQuote from "../Components/images/closequote.png";
+// import React from "react";
+// // import { Carousel } from "react-responsive-carousel";
+// import styled from "styled-components";
+// import OpenQuote from "../Components/images/openquote.png";
+// import CloseQuote from "../Components/images/closequote.png";
 
+
+// class Reviews extends React.Component {
+//   render() {
+//     state = {
+//       currentSlideIndex: 0,
+//     };
+
+//     slideData = [
+//       {
+//         img: Lore1stScreen,
+//         altTxt: "Lore",
+//       },
+//       {
+//         img: Board,
+//         altTxt: "Community Board",
+//       },
+//       {
+//         img: CharacterSelector,
+//         altTxt: "Character Selector",
+//       },
+//       {
+//         img: CharacterSheet,
+//         altTxt: "Character Abilities",
+//       },
+//       {
+//         img: MapScreen,
+//         altTxt: "Battle Map",
+//       },
+//     ];
+//     return (
+//       <div>
+//         <Container>
+//           {this.slideData.map((slide, i) => (
+//             <Slide
+//               key={"slide" + i}
+//               src={slide.img}
+//               alt={slide.altTxt}
+//               isCurrentSlide={this.state.currentSlideIndex === i}
+//             />
+//           ))}
+//           <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
+//           <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
+//         </Container>
 class Reviews extends React.Component {
   render() {
     return (
@@ -29,57 +72,82 @@ class Reviews extends React.Component {
   }
 }
 
-export default Reviews;
+//         <div>
+//           {this.slideData.map((_, i) => (
+//             <Dots
+//               key={"dot" + i}
+//               onClick={() => this.setState({ currentSlideIndex: i })}
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+// export default Reviews;
 
-const ReviewCarousel = styled.ul`
-  width: 80vw;
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  text-align: left;
-  margin: 3rem;
-  @media (min-width: 400px) {
-    width: 50vw;
-  }
-`;
+// const Slide = styled.img`
+//   width: 60%;
+//   display: ${(props) => (props.isCurrentSlide ? "block" : "hidden")};
+// `;
 
-const Review = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-self: center;
-  width: 100%;
-`;
+// const Container = styled.div`
+//   display: flex;
+//   width: 60%;
+//   height: auto;
+//   padding: 1rem;
+//   border: 5px ridge rgb(17, 27, 71);
+// `;
 
-const ReviewText = styled.p`
-  font-size: 1rem;
-  width: 100%;
-  text-align: center;
-  @media (min-width: 400px) {
-    font-size: 2rem;
-  }
-`;
+// const ArrowLeft = styled.a`
+//   cursor: pointer;
+//   margin-top: 5rem;
+//   width: auto;
+//   /* margin-top: -22px; */
+//   /* padding: 16px; */
+//   color: rgb(130, 81, 235);
+//   font-weight: bold;
+//   font-size: 1.25rem;
+//   transition: 0.6s ease;
+//   border-radius: 0 3px 3px 0;
+//   user-select: none;
 
-const OpenQuotation = styled.img`
-  position: relative;
-  left: -2rem;
-  width: 3rem;
-`;
-const CloseQuotation = styled.img`
-  position: relative;
-  right: -2rem;
-  width: 3rem;
-  margin-bottom: 1rem;
-  align-self: flex-end;
-`;
+//   :hover {
+//     background-color: rgba(0, 0, 0, 0.8);
+//   }
+// `;
 
-const Attribution = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-`;
+// const ArrowRight = styled.a`
+//   cursor: pointer;
+//   margin-top: 5rem;
+//   width: auto;
+//   margin-top: -15px;
+//   padding: 16px;
+//   color: rgb(130, 81, 235);
+//   font-weight: bold;
+//   font-size: 1.25rem;
+//   transition: 0.6s ease;
+//   border-radius: 0 3px 3px 0;
+//   user-select: none;
+
+//   :hover {
+//     background-color: rgba(0, 0, 0, 0.8);
+//   }
+// `;
+
+// const Dots = styled.span`
+//   cursor: pointer;
+//   height: 1rem;
+//   width: 1rem;
+//   margin-left: 4.8rem;
+//   margin-top: 1rem;
+//   background-color: #bbb;
+//   border-radius: 50%;
+//   display: inline-block;
+//   transition: background-color 0.6s ease;
+
+//   :hover {
+//     background-color: rgb(113, 113, 113);
+//   }
+// `;

@@ -1,20 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import BlueWolf from "./images/mobile-imgs/blue-wolf.svg";
-import MapScreen from "./images/mobile-imgs/map-screen.svg";
+import KeyframesSlides from "./KeyframeSlides";
 
 class Keyframes extends React.Component {
   render() {
     return (
-      <Main>
+      <Main id="keyframes">
         <Container>
           <DesktopImg src={BlueWolf} alt="Blue Wolf" />
-          <div>
-            <Map src={MapScreen} alt="Map Screen" />
-            <Join>
-              Join <Epic>Epic</Epic> Battles
-            </Join>
-          </div>
+          <Join>
+            Join <Epic>Epic</Epic> Battles
+          </Join>
+          <KeyframesSlides />
         </Container>
       </Main>
     );
@@ -25,8 +23,6 @@ export default Keyframes;
 
 const Main = styled.div`
   @media (min-width: 400px) {
-    display: flex;
-    justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.07);
   }
 `;
@@ -34,24 +30,10 @@ const Main = styled.div`
 const DesktopImg = styled.img`
   display: hidden;
   @media (min-width: 400px) {
+    grid-area: character;
     display: block;
     width: 35vw;
-    position: relative;
-    top: -7rem;
-  }
-`;
-
-const Map = styled.img`
-  width: 90%;
-  margin: auto;
-  position: relative;
-  top: -16rem;
-  left: 1rem;
-  @media (min-width: 400px) {
-    top: 2rem;
-    left: 0;
-    margin-right: 0.5rem;
-    width: 60vw;
+    align-self: center;
   }
 `;
 
@@ -59,14 +41,18 @@ const Container = styled.div`
   margin-top: 2rem;
   background: rgba(0, 0, 0, 0.07) url(${BlueWolf}) no-repeat;
   width: 100vw;
-  height: 60vh;
-  position: relative;
+  height: auto;
   margin-bottom: 2rem;
   @media (min-width: 400px) {
     background: none;
-    height: 70vh;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "character map map"
+      "character join join";
+    align-items: center;
   }
 `;
 
@@ -74,12 +60,11 @@ const Join = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  position: relative;
   top: -12rem;
   @media (min-width: 400px) {
+    grid-area: join;
     font-size: 3rem;
-    position: relative;
-    top: 3rem;
+    margin-top: -15rem;
   }
 `;
 

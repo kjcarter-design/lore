@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar.jsx";
-import devices from "./images/devices.svg";
+import devices from "./images/Platforms.png";
 import MainImage from "./images/MainImage.svg";
 import MainImg from "../Components/images/mobile-imgs/main-mobile.svg";
 import LogoWhite from "../Components/images/mobile-imgs/logo-white.svg";
@@ -10,7 +10,7 @@ import LogoWhite from "../Components/images/mobile-imgs/logo-white.svg";
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <div id="home">
         <DesktopContainer>
           <DeTitle>
             <DeTitleAssets>
@@ -33,7 +33,6 @@ class Header extends React.Component {
             <TitleTxt>The Time Has Come</TitleTxt>
             <Button>Learn More</Button>
           </Title>
-
           <Navbar />
         </Container>
       </div>
@@ -140,5 +139,4 @@ const Devices = styled.img`
   z-index: 2;
   top: 7rem;
 `;
-
 

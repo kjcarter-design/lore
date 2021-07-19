@@ -1,4 +1,11 @@
 import React from "react";
+
+// import styled from "styled-components";
+
+class Registration extends React.Component {
+  render() {
+    return <div id="registration"></div>;
+
 import styled from "styled-components";
 import Sword from './images/sword.png'
 import Background from './images/reg-background.png'
