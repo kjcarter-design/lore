@@ -20,7 +20,7 @@ class Reviews extends React.Component {
 
             <Attribution>
               <p> -- John Smith</p>
-              <img src={IGN} />
+              <img src={IGN} alt='Attribution' />
             </Attribution>
           </Review>
         </ReviewCarousel>
