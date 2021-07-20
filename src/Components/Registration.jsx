@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import Sword from "./images/sword.png";
 // import Bkground from "./images/background.png";
 import RedLogo from "./images/mobile-imgs/Logo.svg";
-import Overlay from "react-overlays/Overlay";
+// import Overlay from "react-overlays/Overlay";
 
 class Registration extends React.Component {
   validate() {
