@@ -18,15 +18,15 @@ class Navbar extends React.Component {
           <List>
             <Dice src={dice} alt="Logo" />
             <Spacer src={dotNavbar} alt="circle" />
-            <HashLink to={"#home"}>Home</HashLink>
+            <HashLink style={{ textDecoration:'none'}} to={"#keyframes"}>How it Works</HashLink>
+            <Spacer style={{ textDecoration:'none'}}src={dotNavbar} alt="circle" />
+            <HashLink style={{ textDecoration:'none'}} to={"#faq"}>FAQ's</HashLink>
             <Spacer src={dotNavbar} alt="circle" />
-            <HashLink to={"#keyframes"}>How it Works</HashLink>
-            <Spacer src={dotNavbar} alt="circle" />
-            <HashLink to={"#faq"}>FAQ's</HashLink>
-            <Spacer src={dotNavbar} alt="circle" />
-            <HashLink to={"#footer"}>Contact Us</HashLink>
-            <HashLink to={"#registration"}>Sign In</HashLink>
-            <HashLink to={"#registration"}>Try for Free</HashLink>
+            <HashLink style={{ textDecoration:'none'}} to={"#footer"}>Contact Us</HashLink>
+            <HashLink style={{ textDecoration:'none'}} to={"#registration"}>Sign In</HashLink>
+            <HashLink to={"#registration"}>
+              <Free>Try for Free</Free>
+            </HashLink>
           </List>
         </Holder>
       </Container>
@@ -38,6 +38,7 @@ export default Navbar;
 
 const Container = styled.div`
   font-family: "Roboto", sans-serif;
+
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
   font-size: 0.7rem;
   width: 100%;
@@ -61,9 +62,19 @@ const Holder = styled.ul`
 `;
 
 const List = styled.li`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
   list-style: none;
   color: rgb(130, 81, 235);
   font-size: 0.8rem;
+  &:visited{
+  color: rgb(130, 81, 235);
+  text-decoration: none;
+}
   @media (min-width: 400px) {
     display: flex;
     width: 100;
@@ -71,49 +82,23 @@ const List = styled.li`
   }
 `;
 
-// const Current = styled.li`
-//   display: none;
-//   @media (min-width: 400px) {
-//     display: block;
-//     color: rgb(0, 0, 0);
-//     font-size: 1.5rem;
-//   }
-// `;
-
 const Spacer = styled.img`
   display: none;
 `;
 
-// const Sign = styled.button`
-//   font-family: "Roboto", sans-serif;
-//   font-size: 1.2rem;
-//   background-color: transparent;
-//   color: #111b47;
-//   border: none;
-//   width: max-content;
-//   display: none;
-//   @media (min-width: 400px) {
-//     display: block;
-//     margin-left: 10rem;
-//     margin-right: -5rem;
-//     font-size: 1.5rem;
-//   }
-// `;
-
-// const Free = styled.button`
-//   font-family: "Roboto", sans-serif;
-//   font-size: 0.7rem;
-//   background-color: #111b47;
-//   color: #fff;
-//   padding: 3px;
-//   width: max-content;
-//   margin-right: 2rem;
-//   border: none;
-//   @media (min-width: 400px) {
-//     font-size: 1.5rem;
-//     padding: 0.5rem;
-//   }
-// `;
+const Free = styled.button`
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  background-color: #111b47;
+  color: #fff;
+  padding: 3px;
+  width: max-content;
+  border: none;
+  @media (min-width: 400px) {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+`;
 
 const Dice = styled.img`
   width: 10%;
@@ -121,8 +106,3 @@ const Dice = styled.img`
     width: 5%;
   }
 `;
-
-// const Button = styled.span`
-//   display: inline;
-//   margin-right: 1rem;
-// `;

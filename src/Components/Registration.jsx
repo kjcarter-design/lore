@@ -1,20 +1,10 @@
 import React from "react";
-
-// import styled from "styled-components";
-
-class Registration extends React.Component {
-  render() {
-    return <div id="registration"></div>;
-
 import styled from "styled-components";
 import Sword from './images/sword.png'
 import Background from './images/reg-background.png'
 import RedLogo from './images/mobile-imgs/Logo.svg'
 
-class Registration extends React.Component {
-  render() {
-    return (
-  
+// import styled from "styled-components";
 class Registration extends React.Component {
 
   validate() {
@@ -121,7 +111,7 @@ class Registration extends React.Component {
   }
   
 }
-    )
+
 
 export default Registration;
 
@@ -216,7 +206,6 @@ const InputButton = styled.button`
   color: white;
   padding: 0.5rem;
 `;
-  }
-}
+
 
 export default Registration;
