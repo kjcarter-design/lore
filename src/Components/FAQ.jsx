@@ -1,58 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Nec from "./images/mobile-imgs/nec.svg";
-
-// const data = {
-//   faqs: [
-//     {
-//       _id: "0",
-//       index: 0,
-//       question: "Is Lore free to use?",
-//       answer:
-//         "Yes! Lore is free to use with the novice membership level. There are more features to with which to play, at higher paid membership levels.",
-//     },
-//     {
-//       _id: "1",
-//       index: 1,
-//       question: "How does Lore work?",
-//       answer:
-//         "Lore is a virtual tabletop that works more like a video game. It allows for quicker and more intuitive selection of Game modes, combat tracking, and ambiance control. All rolls are done automatically, allowing for the player and DM to remain immersed in the action.",
-//     },
-//     {
-//       _id: "2",
-//       index: 2,
-//       question: "Can any rule-set be used?",
-//       answer:
-//         "Yes! Lore can be used to play a wide variety of games, just make your selection in the campaign creator.",
-//     },
-//     {
-//       _id: "3",
-//       index: 3,
-//       question: "Can I Import my dnd beyond character sheets?",
-//       answer:
-//         "Not at this time. However in the future we would like to see some integration. ",
-//     },
-//   ],
-// };
+import FAQSlider from "./FAQSlider";
+import { SliderData } from "./SliderData";
 
 class Faq extends React.Component {
   render() {
     return (
       <FaqContainer id="faq">
-        <FaqWrapper>
-          <QuestionWrapper>
-            <OpenQuote>"</OpenQuote>
-            <Question>Is Lore free to use?</Question>
-            <CloseQuote>"</CloseQuote>
-          </QuestionWrapper>
-          <div>
-            <Answer>
-              Yes! Lore is free to use with the novice membership level. There
-              are more features to with which to play, at higher paid membership
-              levels.
-            </Answer>
-          </div>
-        </FaqWrapper>
+          <FAQSlider slides={SliderData} />
       </FaqContainer>
     );
   }
@@ -69,7 +25,7 @@ const FaqContainer = styled.div`
   justify-content: center;
   align-items: center;
   justify-self: center;
-  height: 568px;
+  height: 100vh;
   margin-top: 2rem;
   margin-bottom: 2rem;
 `;
