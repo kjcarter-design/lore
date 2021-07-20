@@ -30,50 +30,50 @@ const FaqContainer = styled.div`
   margin-bottom: 2rem;
 `;
 
-const FaqWrapper = styled.div`
-  background-color: #ffffff80;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  height: 20rem;
-  width: 15rem;
-`;
+// const FaqWrapper = styled.div`
+//   background-color: #ffffff80;
+//   border-radius: 0.5rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-self: center;
+//   height: 20rem;
+//   width: 15rem;
+// `;
 
-const QuestionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-`;
+// const QuestionWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   margin: 1rem;
+// `;
 
-const OpenQuote = styled.p`
-  display: flex;
-  justify-self: flex-start;
-  font-size: 5rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 40px;
-`;
+// const OpenQuote = styled.p`
+//   display: flex;
+//   justify-self: flex-start;
+//   font-size: 5rem;
+//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//   height: 40px;
+// `;
 
-const CloseQuote = styled.p`
-  display: flex;
-  align-self: flex-end;
-  font-size: 5rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 40px;
-`;
+// const CloseQuote = styled.p`
+//   display: flex;
+//   align-self: flex-end;
+//   font-size: 5rem;
+//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//   height: 40px;
+// `;
 
-const Question = styled.p`
-  display: flex;
-  align-self: center;
-  text-align: center;
-  font-weight: 800;
-  font-size: x-large;
-`;
+// const Question = styled.p`
+//   display: flex;
+//   align-self: center;
+//   text-align: center;
+//   font-weight: 800;
+//   font-size: x-large;
+// `;
 
-const Answer = styled.p`
-  text-align: justify;
-  font-style: italic;
-  font-weight: 500;
-  font-size: large;
-  margin: 1rem;
-`;
+// const Answer = styled.p`
+//   text-align: justify;
+//   font-style: italic;
+//   font-weight: 500;
+//   font-size: large;
+//   margin: 1rem;
+// `;
