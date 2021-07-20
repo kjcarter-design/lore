@@ -1,43 +1,40 @@
-import React, { Component } from "react";
-import { Carousel } from "react-responsive-carousel";
-import styled from "styled-components";
-
-export default class KeyFramesComponent extends Component {
-state = {
-    Carousel: []
-}
+import React, { useState } from "react";
+import { KeyframeSlideData } from "./KeyframeSlideData";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 
-render(){
+const KeyframeSlides = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
   return (
-    <CarouselContainer>
-      
-    </CarouselContainer>
+    <section className="keyframeSlider">
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {KeyframeSlideData.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === current && (
+              <img src={slide.image} alt="travel image" className="image" />
+            )}
+          </div>
+        );
+      })}
+    </section>
   );
-}}
-
-const CarouselContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  margin: 0 auto;
-`;
-const Slide = styled.img`
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 2rem;
-`;
-
-const Writing = styled.p`
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: rgb(17, 27, 71);
-  margin-left: 3.5rem;
-`;
-
+};
+export default KeyframeSlides;
  {/* <Carousel infiniteLoop useKeyboardArrows autoPlay> */}
         {/* <div>
           <Slide src="../Main-Screen.png" alt="Start up" />
