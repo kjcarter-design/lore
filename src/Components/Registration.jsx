@@ -6,7 +6,13 @@ import Sword from "./images/sword.png";
 import RedLogo from "./images/mobile-imgs/Logo.svg";
 // import Overlay from "react-overlays/Overlay";
 
+
 class Registration extends React.Component {
+
+// import styled from "styled-components";
+class Registration extends React.Component {
+
+
   validate() {
     var result = "";
     result += this.validateName();
@@ -111,6 +117,7 @@ class Registration extends React.Component {
   }
 }
 
+
 export default Registration;
 
 // const PageContainer = styled.div`
@@ -204,3 +211,7 @@ const InputButton = styled.button`
   color: white;
   padding: 0.5rem;
 `;
+
+
+export default Registration;
+

@@ -139,3 +139,7 @@ table {
     background-color: rgb(249, 248, 248);
   }
 }
+
+a:visited{
+  text-decoration: none;
+}
