@@ -4,6 +4,7 @@
 // import OpenQuote from "../Components/images/openquote.png";
 // import CloseQuote from "../Components/images/closequote.png";
 
+
 // class Reviews extends React.Component {
 //   render() {
 //     state = {
@@ -46,6 +47,30 @@
 //           <ArrowLeft onClick="plusSlides(-1)"> &#x291F;</ArrowLeft>
 //           <ArrowRight onClick="plusSlides(1)"> &#x2920;</ArrowRight>
 //         </Container>
+class Reviews extends React.Component {
+  render() {
+    return (
+      <Container>
+        <ReviewCarousel>
+          <Review>
+            <OpenQuotation src={OpenQuote}  alt='Open Quote'/>
+            <ReviewText>
+              Lore brings the fight to your fingers. Fight with legends and
+              explore new lands. Each quest requires speed, knowledge but most
+              importantly it requires heart.
+            </ReviewText>
+            <CloseQuotation src={CloseQuote} alt='Close Quote' />
+
+            <Attribution>
+              <p> -- John Smith</p>
+              <img src={IGN} alt='Attribution' />
+            </Attribution>
+          </Review>
+        </ReviewCarousel>
+      </Container>
+    );
+  }
+}
 
 //         <div>
 //           {this.slideData.map((_, i) => (

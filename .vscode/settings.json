@@ -6,8 +6,16 @@
     "Appstore",
     "allowfullscreen",
     "amap",
+    "browserslist",
+    "closequote",
+    "googlemaps",
     "imgs",
     "k",
+<<<<<<< HEAD
+    "retypefield",
+=======
+    "openquote",
+>>>>>>> 14479bca38c129065994ea73431bb376a4dec1ba
     "tincan",
     "youtube"
   ]

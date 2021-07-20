@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BlueWolf from "./images/mobile-imgs/blue-wolf.svg";
-import KeyframesSlides from "./KeyframeSlides";
+import BootstrapCarousel from "./KeyframeSlides";
 
 class Keyframes extends React.Component {
   render() {
@@ -12,7 +12,6 @@ class Keyframes extends React.Component {
           <Join>
             Join <Epic>Epic</Epic> Battles
           </Join>
-          {/* <KeyframesSlides /> */}
         </Container>
       </Main>
     );

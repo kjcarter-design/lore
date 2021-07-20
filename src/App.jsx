@@ -6,6 +6,7 @@ import Pricing from "./Components/Pricing.jsx";
 import Menu from "./Components/Menu.jsx";
 import Keyframes from "./Components/Keyframes.jsx";
 import FAQ from "./Components/FAQ.jsx";
+import Registration from "./Components/Registration.jsx";
 
 // import Registration from "./Components/Registration";
 
@@ -20,6 +21,7 @@ function App() {
       <Pricing />
       <FAQ />
       <Footer />
+      {/* <Registration /> */}
     </div>
   );
 }

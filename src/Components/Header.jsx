@@ -6,6 +6,7 @@ import MainImage from "./images/MainImage.svg";
 import MainImg from "../Components/images/mobile-imgs/main-mobile.svg";
 import LogoWhite from "../Components/images/mobile-imgs/logo-white.svg";
 
+
 class Header extends React.Component {
   render() {
     return (
@@ -132,19 +133,10 @@ const TitleButtons = styled.div`
   flex-direction: row;
 `;
 
-// const SignUp = styled.button`
-//   font-family: "Roboto", sans-serif;
-//   background-color: #111b47;
-//   color: #fff;
-//   padding: 0.5rem;
-//   align-self: flex-end;
-//   width: max-content;
-//   border: none;
-//   border-radius: 5px;
-//   font-size: 1.5rem;
-// `;
+
 
 const Devices = styled.img`
   z-index: 2;
   top: 7rem;
 `;
+
